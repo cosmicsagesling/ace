@@ -11,7 +11,7 @@ const figtree = Figtree(
 const page = () => {
   return (
     <main>
-      <section className='overflow-hidden relative h-screen flex flex-col gap-4 items-center justify-center w-full bg-gradient-to-t from-green-200 via-white to-white '>
+      <section className='overflow-hidden relative h-[82dvh] flex flex-col gap-4 items-center justify-center w-full bg-gradient-to-t from-green-200 via-white to-white '>
         <AvatarGroup/>
         <div className='flex flex-col gap-2'>
         <h1 className={` ${figtree.className} text-center font-semibold text-5xl text-black `}>Unlocking Global Opportunities with A.C.E <br /> -  Your Partner in Success</h1>
@@ -21,15 +21,22 @@ const page = () => {
         </div>
         <a className='cursor-pointer bg-black text-white px-8 py-2 rounded-full font-semibold hover:translate-y-1 transition-all hover:bg-gray-700'>Get Started</a>
         <div>
-          <img src="/dot.svg" alt="" className='absolute top-20 right-44 size-15' />
+          <img src="/Frame 576.svg" alt="" className='absolute top-30 right-44 size-15 z-99 text-white ' />
           <img src="/dot.svg" alt="" className='absolute bottom-48 left-44 size-15' />
         </div>
         <div>
-          <img src="/bg-arrow.svg" alt="" className='absolute top-0 right-0 h-full w-fit' />
+          <img src="/bg-arrow.svg" alt="" className='absolute -top-2 right-0 h-full w-fit' />
+          <img src="/bg-arrow.svg" alt="" className='absolute -bottom-87 left-0 rotate-180 h-full w-fit' />
+
         </div>
       </section>
 
-      <section className='h-[80dvh] bg-transparent'>
+      <div className='h-[5dvh] w-full bg-gradient-to-t from-white to-green-200' />
+
+      <section>
+
+
+
 
       </section>
     </main>

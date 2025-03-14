@@ -4,7 +4,7 @@ import { BsArrowReturnRight} from 'react-icons/bs'
 
 const AvatarGroup = () => {
   return (
-    <div className='flex items-center px-10 ring-1 gap-4 ring-slate-200 rounded-full py-2'>
+    <div className='cursor-pointer flex items-center pr-7 border-t-2 border-t-green-400 drop-shadow-2xl pl-6 ring-1 gap-4 ring-slate-200 rounded-full py-1'>
         <div className='relative flex items-center'>
             <div className='w-10 h-10 rounded-full overflow-hidden'>
                 <img src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM=" alt="" className='object-cover w-full h-full' />
