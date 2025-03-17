@@ -1,5 +1,6 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import Image from "next/image";
 
 export function TimelineDemo() {
   const data = [
@@ -31,7 +32,8 @@ export function TimelineDemo() {
             not. Here are some more example of beautiful designs I built.
           </p>
           <div className="grid grid-cols-2 gap-4">
-    
+          <Image alt="image" src={"https://www.amosglobalsolutions.com/gallery/SIMATS/amos_simats_12.jpg"} width={500} height={500}/>
+            <Image alt="image" src={"https://www.amosglobalsolutions.com/gallery/SIMATS/amos_simats_14.jpg"} width={500} height={500}/>
           </div>
         </div>
       ),
@@ -45,20 +47,8 @@ export function TimelineDemo() {
 
           </p>
           <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Card grid component
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Salman Bhai Fan Club registrations open
+            <div>
+              <p></p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">

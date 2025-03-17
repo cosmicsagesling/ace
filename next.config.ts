@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "www.amosglobalsolutions.com",
+      },
+      {
+        protocol: "https",
         hostname: "amosglobalsolutions.com",
       },
       {
