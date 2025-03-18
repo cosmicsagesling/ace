@@ -10,10 +10,100 @@ import { SpecialButton } from "./Components/SpecialButton";
 import { Check } from "lucide-react";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import { TimelineDemo } from "./Components/Timeline";
+import ModernCourseCard from "./Components/courseCard";
 
 const figtree = Figtree({
   subsets: ["latin"],
 });
+
+
+const Course = [
+  {
+    id: 1,
+    course_title: "IELTS Mastery Program",
+    description: "Achieve your dream IELTS score with expert coaching, real-test simulations, and personalized feedback.",
+    timeline: "24 Days",
+    count: "3k+ Students",
+    overall_price: 99.00,
+    discount_price: 49.00,
+    category: "English Proficiency",
+    ratings: 4.9,
+    status: "Featured"
+  },
+  {
+    id: 2,
+    course_title: "PTE Success Program",
+    description: "Boost your PTE score with AI-driven practice, live training, and advanced test strategies.",
+    timeline: "20 Days",
+    count: "2.8k Students",
+    overall_price: 99.00,
+    discount_price: 45.00,
+    category: "English Proficiency",
+    ratings: 4.8,
+    status: "Featured"
+  },
+  {
+    id: 3,
+    course_title: "TOEFL Exam Prep",
+    description: "Comprehensive TOEFL training to improve academic English skills for university admissions.",
+    timeline: "25 Days",
+    count: "2k+ Students",
+    overall_price: 89.00,
+    discount_price: 44.00,
+    category: "English Proficiency",
+    ratings: 4.7,
+    status: "Popular"
+  },
+  {
+    id: 4,
+    course_title: "OET Training for Healthcare Professionals",
+    description: "Specialized OET coaching for medical professionals looking to work or study abroad.",
+    timeline: "30 Days",
+    count: "1.5k Students",
+    overall_price: 109.00,
+    discount_price: 55.00,
+    category: "English Proficiency",
+    ratings: 4.8,
+    status: "Featured"
+  },
+  {
+    id: 5,
+    course_title: "Advanced Business English",
+    description: "Enhance your communication skills with business-focused English training for professional growth.",
+    timeline: "30 Days",
+    count: "1.5k Students",
+    overall_price: 79.00,
+    discount_price: 39.00,
+    category: "Communication Mastery",
+    ratings: 4.7,
+    status: "Popular"
+  },
+  {
+    id: 6,
+    course_title: "Verbal Communication & Public Speaking",
+    description: "Master verbal fluency, storytelling, and presentation skills to boost confidence in public speaking.",
+    timeline: "21 Days",
+    count: "1.8k Students",
+    overall_price: 69.00,
+    discount_price: 35.00,
+    category: "Soft Skills",
+    ratings: 4.8,
+    status: "New"
+  },
+  {
+    id: 7,
+    course_title: "French for Beginners",
+    description: "Master French fundamentals and build fluency with native-level training.",
+    timeline: "45 Days",
+    count: "1.2k Students",
+    overall_price: 120.00,
+    discount_price: 60.00,
+    category: "Foreign Language Training",
+    ratings: 4.8,
+    status: "New"
+  }
+];
+
 
 const page = () => {
   return (
@@ -24,13 +114,13 @@ const page = () => {
         <div className="flex flex-col gap-2">
           <h1
           data-aos="zoom-in" data-aos-delay="100"
-            className={`z-50 max-md:hidden ${figtree.className} text-center font-semibold text-5xl max-md:text-xl text-black `}
+            className={`z-50 max-md:hidden ${figtree.className} text-center font-semibold text-5xl max-md:text-xl text-black md:leading-16`}
           >
-            Unlocking Global Opportunities with A.C.E <br /> - Your Partner in
-            Success -
+            Unlocking Global Opportunities with A.C.E <br /> - Tailored Training
+            Solution -
           </h1>
-          <h2 className="block md:hidden text-center text-3xl font-semibold leading-snug">
-            Global Opportunities with A.C.E <br />  <span className="text-2xl bg-gradient-to-b from-black to-gray-700 text-transparent bg-clip-text">Your Success Partner</span>
+          <h2 className="z-50 block md:hidden text-center text-3xl font-semibold leading-snug">
+            Global Opportunities with A.C.E <br />  <span className="text-2xl font-medium bg-gradient-to-b from-black to-gray-500 text-transparent bg-clip-text">Tailored Training Solutions</span>
           </h2>
           <p data-aos="zoom-in" data-aos-delay="200" className="text-gray-500 text-center max-md:text-sm">
             Dive into the world of unlocking the global opportunities <br />
@@ -213,6 +303,12 @@ const page = () => {
           </div>
         </div>
         {/* wrapperend */}
+      </section>
+
+
+      <section  className="p-10">
+
+        <ModernCourseCard courses={Course}/>
       </section>
 
 

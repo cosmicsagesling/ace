@@ -5,7 +5,7 @@ import Image from "next/image";
 export function TimelineDemo() {
   const data = [
     {
-      title: "2024",
+      title: "2023",
       content: (
         <div>
           <p className="text-neutral-800 text-3xl max-md:text-xl dark:text-neutral-200 font-semibold mb-8">
@@ -20,7 +20,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "Early 2023",
+      title: "Early 2024",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-3xl font-semibold  mb-8">
@@ -28,8 +28,7 @@ export function TimelineDemo() {
 
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
+         here content should be pasted
           </p>
           <div className="grid grid-cols-2 gap-4">
           <Image alt="image" src={"https://www.amosglobalsolutions.com/gallery/SIMATS/amos_simats_12.jpg"} width={500} height={500}/>
