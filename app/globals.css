@@ -17,6 +17,15 @@ body {
   }
 }
 
+/* Add these classes to your globals.css */
+.clip-path-circle-small {
+  clip-path: circle(0% at calc(100% - 2rem) 2.5rem);
+}
+
+.clip-path-circle-full {
+  clip-path: circle(150% at calc(100% - 2rem) 2.5rem);
+}
+
 .animate-marquee {
   animation: marquee 15s linear infinite;
 }

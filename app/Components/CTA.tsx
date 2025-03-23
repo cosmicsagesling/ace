@@ -34,7 +34,7 @@ const ImprovedCTA = () => {
   };
 
   return (
-    <div className="m-5 bg-[url('https://images.unsplash.com/photo-1737365505612-7ff3ef8f7970?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] from-green-500 to-green-200 p-15 rounded-xl text-white">
+    <div className="m-5 bg-green-100 text-black .com/premium_photo-1661928975475-57502a6e34a5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-right from-green-500 to-green-200 p-15 rounded-">
       <div className="mx-auto">
         <h2 className="max-md:text-3xl text-4xl font-bold mb-4">
           Take the First Step Towards Your Success!

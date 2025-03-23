@@ -75,6 +75,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.udel.edu",
       },
+      {
+        protocol: "https",
+        hostname: "www.gstatic.com",
+      },
     ],
   },
   eslint: {

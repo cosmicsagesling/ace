@@ -107,19 +107,22 @@ const Course = [
 
 const page = () => {
   return (
-    <main className="overflow-hidden">
+    <main className="">
       {/* Hero section */}
       <section className="overflow-hidden relative max-md:h-full max-md:py-32 h-[90dvh] flex flex-col gap-4 items-center justify-center w-full bg-gradient-to-t from-green-200 via-white to-white ">
         <AvatarGroup />
         <div className="flex flex-col gap-2">
           <h1
           data-aos="zoom-in" data-aos-delay="100"
-            className={`z-50 max-md:hidden ${figtree.className} text-center font-semibold text-5xl max-md:text-xl text-black md:leading-16`}
+            className={`z-40 max-md:hidden ${figtree.className} text-center font-semibold text-5xl max-md:text-xl text-black md:leading-16`}
           >
             Unlocking Global Opportunities with A.C.E <br /> - Tailored Training
             Solution -
           </h1>
-          <h2 className="z-50 block md:hidden text-center text-3xl font-semibold leading-snug">
+          <h2
+                    data-aos="zoom-in" data-aos-delay="100"
+
+className="z-40 block md:hidden text-center text-3xl font-semibold leading-snug">
             Global Opportunities with A.C.E <br />  <span className="text-2xl font-medium bg-gradient-to-b from-black to-gray-500 text-transparent bg-clip-text">Tailored Training Solutions</span>
           </h2>
           <p data-aos="zoom-in" data-aos-delay="200" className="text-gray-500 text-center max-md:text-sm">
@@ -127,9 +130,7 @@ const page = () => {
             the second line of the desc goes here
           </p>
         </div>
-        {/* <a className="z-20 max-md:text-sm cursor-pointer bg-black text-white px-8 py-2 rounded-full font-semibold hover:translate-y-1 transition-all hover:bg-gray-700">
-          Get Started
-          </a> */}
+
         <SpecialButton  />
         <RetroGrid />
         <div>
@@ -308,7 +309,6 @@ const page = () => {
 
       <section  className="p-10">
 
-        <ModernCourseCard courses={Course}/>
       </section>
 
 
