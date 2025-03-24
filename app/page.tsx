@@ -7,12 +7,25 @@ import { BiUserCheck } from "react-icons/bi";
 import { SlCalender } from "react-icons/sl";
 import { GiGrowth } from "react-icons/gi";
 import { SpecialButton } from "./Components/SpecialButton";
-import { Check } from "lucide-react";
+import { BookOpenCheck, Check, Handshake } from "lucide-react";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import { TimelineDemo } from "./Components/Timeline";
 import ModernCourseCard from "./Components/courseCard";
+import AccordianDemo from "./Components/faq";
+import EdvoyTestimonials from "./Components/testimonials";
+import { Limelight, Tektur } from "next/font/google";
 
 const figtree = Figtree({
+  subsets: ["latin"],
+});
+
+const limelight = Limelight({
+  subsets: ["latin"],
+  weight: "400"
+});
+
+
+const nabla = Tektur({
   subsets: ["latin"],
 });
 
@@ -108,30 +121,30 @@ const Course = [
 const page = () => {
   return (
     <main className="">
+
       {/* Hero section */}
       <section className="overflow-hidden relative max-md:h-full max-md:py-32 h-[90dvh] flex flex-col gap-4 items-center justify-center w-full bg-gradient-to-t from-green-200 via-white to-white ">
         <AvatarGroup />
         <div className="flex flex-col gap-2">
           <h1
-          data-aos="zoom-in" data-aos-delay="100"
+            data-aos="zoom-in" data-aos-delay="100"
             className={`z-40 max-md:hidden ${figtree.className} text-center font-semibold text-5xl max-md:text-xl text-black md:leading-16`}
           >
             Unlocking Global Opportunities with A.C.E <br /> - Tailored Training
             Solution -
           </h1>
           <h2
-                    data-aos="zoom-in" data-aos-delay="100"
+            data-aos="zoom-in" data-aos-delay="100"
 
-className="z-40 block md:hidden text-center text-3xl font-semibold leading-snug">
+            className="z-40 block md:hidden text-center text-3xl font-semibold leading-snug">
             Global Opportunities with A.C.E <br />  <span className="text-2xl font-medium bg-gradient-to-b from-black to-gray-500 text-transparent bg-clip-text">Tailored Training Solutions</span>
           </h2>
           <p data-aos="zoom-in" data-aos-delay="200" className="text-gray-500 text-center max-md:text-sm">
-            Dive into the world of unlocking the global opportunities <br />
-            the second line of the desc goes here
+            Personalized training in English proficiency, communication, <br /> and global skills—designed to help you succeed anywhere in the world.
           </p>
         </div>
 
-        <SpecialButton  />
+        <SpecialButton />
         <RetroGrid />
         <div>
           <img
@@ -214,6 +227,70 @@ className="z-40 block md:hidden text-center text-3xl font-semibold leading-snug"
           </div>
         </div>
       </section>
+
+      <section className="p-20 w-full">
+
+<div className="flex flex-col  justify-between gap-10 ">
+
+<div>
+<h1 className="font-bold text-5xl ">Build Skills That Travel With You</h1>
+<p className="mt-5 text-slate-500">From language mastery to professional growth, our training domains are built to support your journey—wherever you aim to go.</p>
+</div>
+  <div className="grid grid-cols-3 mt-6">
+    <div className="relative bg-white border-r-2 flex flex-col justify-center gap-6 p-10 row-span-2">
+      <div className="absolute w-10 h-10 bg-green-400 layer blur-2xl right-10">
+
+      </div>
+      <div className="absolute w-5 h-5 bg-red-600 left-20 top-40">
+
+      </div>
+      <div className="p-10 w-fit bg-red-200/20 backdrop-blur-xl rounded-full flex items-center justify-center">
+        <BookOpenCheck className="size-11 text-orange-800" />
+
+      </div>
+      <h2 className="font-semibold text-3xl ">English <span className="bg-clip-text bg-gradient-to-b from-green-600 to-green-700 text-transparent">Proficiency</span>
+      </h2>
+      <p>
+        Master international exams like IELTS, PTE, TOEFL, OET, and Duolingo with expert guidance and real-time simulations
+      </p>
+
+    </div>
+    <div className="bg-white border-r-2 flex flex-col gap-6 p-10 border-b-2 ">
+      <Handshake className="size-11" />
+      <h2 className="font-semibold text-3xl "> <span className="bg-clip-text bg-gradient-to-b from-green-600 to-green-700 text-transparent">Professional</span> Communication 
+      </h2>
+      <p>
+      Build confidence in public speaking, presentations, and workplace English with goal-based personalized coaching.
+
+</p>
+
+    </div>
+    <div className="bg-white flex flex-col gap-6 p-10 border-b-2 ">
+      <BookOpenCheck className="size-11" />
+      <h2 className="font-semibold text-3xl ">Foreign <span className={`${limelight.className} font-semibold bg-clip-text bg-gradient-to-b from-green-600 to-green-700 text-transparent  `}>Languages</span> 
+      </h2>
+      <p>
+      Learn global languages like French, German, and Japanese—enhancing your academic and career opportunities abroad.
+
+
+</p>
+
+    </div>
+    <div className="bg-white  border-r-2 flex flex-col gap-6 p-10 col-span-2">
+      <BookOpenCheck className="size-11" />
+        <h2 className={`font-semibold text-3xl ${nabla.className} `}>Study Abroad  Guidance
+
+      </h2>
+      <p>
+      Get full support on choosing the right country, course, and university—along with visa assistance and cultural prep.      </p>
+
+    </div>
+  </div>
+
+
+</div>
+</section>
+
 
       <section className="mt-10 p-5 lg:p-10">
         {/* wrapper */}
@@ -307,12 +384,9 @@ className="z-40 block md:hidden text-center text-3xl font-semibold leading-snug"
       </section>
 
 
-      <section  className="p-10">
+      
 
-      </section>
-
-
-<TimelineDemo/>
+      <TimelineDemo />
 
 
 
@@ -365,6 +439,10 @@ className="z-40 block md:hidden text-center text-3xl font-semibold leading-snug"
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <EdvoyTestimonials />
       </section>
     </main>
   );

@@ -47,7 +47,7 @@ const Navbar = () => {
   return (
     <header className="box-border z-50 w-full bg-white backdrop-blur-3xl px-6 py-2 border-b-2 border-b-slate-300 sticky top-0">
       <nav className="flex items-center justify-between">
-        <Image src={"https://www.gstatic.com/youtube/img/promos/growth/aa20dc50281b5b90da8cd2c3791c28ff8bc3674eff3b5a32ba8654f54d526b50_244x112.webp"} width={100} height={100} />
+        <Image alt="Ace Logo" src={"/Ace Logo.jpg"} width={100} height={100} />
 
         {/* Mobile Menu Trigger */}
         <div

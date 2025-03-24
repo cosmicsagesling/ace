@@ -12,9 +12,7 @@ export function TimelineDemo() {
           1. The Beginning – A Vision for Excellence
           </p>
           <p className="text-slate-600">
-          AMOS Global Solutions launches The A.C.E. to transform education and skill development globally.
-
-
+          AMOS Global Solutions launches The A.C.E. with a mission to redefine training through quality, innovation, and global impact.
           </p>
         </div>
       ),
@@ -28,7 +26,7 @@ export function TimelineDemo() {
 
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-         here content should be pasted
+          The A.C.E. scales its reach—introducing new programs, onboarding global trainers, and connecting with learners across continents.
           </p>
           <div className="grid grid-cols-2 gap-4">
           <Image alt="image" src={"https://www.amosglobalsolutions.com/gallery/SIMATS/amos_simats_12.jpg"} width={500} height={500}/>
@@ -47,7 +45,11 @@ export function TimelineDemo() {
           </p>
           <div className="mb-8">
             <div>
-              <p></p>
+              <p>
+              Integrating AI-powered tools, immersive simulations, and flexible learning models, A.C.E. sets a new benchmark in education excellence.
+
+
+              </p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">

@@ -7,10 +7,10 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen } : {question:string, an
   return (
     <div className="border-b border-gray-200 last:border-0">
       <button
-        className={`w-full ${isOpen ? 'bg-green-500' : ''} py-5 px-4 flex justify-between items-center text-left focus:outline-none transition-colors duration-300`}
+        className={`w-full ${isOpen ? 'bg-gradient-to-b from-green-600 to-green-700' : ''} py-5 px-4 flex justify-between items-center text-left focus:outline-none transition-colors duration-300`}
         onClick={toggleOpen}
       >
-        <h3 className={`cursor-pointer text-lg font-medium ${isOpen ? 'text-white' : ''}`}>{question}</h3>
+        <h3 className={`cursor-pointer text-lg font-medium ${isOpen ? 'text-white' : 'text-gray-500'}`}>{question}</h3>
         <Plus 
           className={`text-lime-500 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45 text-white' : 'rotate-0'}`} 
           size={24} 
@@ -20,7 +20,7 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen } : {question:string, an
         className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <div className="px-4 py-5">
-          <p className="text-gray-400">{answer}</p>
+          <p className="text-gray-800 font-semibold">{answer}</p>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen } : {question:string, an
 };
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(1); // Set the second item open by default
+  const [openIndex, setOpenIndex] = useState(0); // Set the second item open by default
 
   const faqItems = [
     {
@@ -59,7 +59,7 @@ const FAQ = () => {
 
   return (
     <div className=" text-black py-16">
-      <div className="container mx-auto px-10">
+      <div className=" px-10">
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/3">
             <h2 className="text-4xl font-bold mb-8">
@@ -70,7 +70,7 @@ const FAQ = () => {
             </p>
           </div>
           
-          <div className="lg:w-2/3 bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+          <div className="lg:w-2/3 bg-gray-100 rounded-lg overflow-hidden shadow-lg">
             {faqItems.map((item, index) => (
               <FAQItem
                 key={index}
