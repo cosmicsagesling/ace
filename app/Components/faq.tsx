@@ -2,6 +2,7 @@
 "use client"
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const FAQItem = ({ question, answer, isOpen, toggleOpen } : {question:string, answer:string,isOpen:boolean, toggleOpen:any}) => {
   return (
@@ -68,6 +69,14 @@ const FAQ = () => {
             <p className="text-gray-400 mb-8">
               Find answers to the most common questions about our services and approach.
             </p>
+            <form action="" className='flex justify-betweem md:mr-10 ring-1  ring-slate-400 rounded-xl overflow-hidden pl-5 justify-between '>
+              <div className='flex items-center gap-4'>
+                <Mail/>
+              <input type="text" placeholder='Enter your email' className='w-full outline-0' />
+
+              </div>
+              <button className='bg-green-700 text-white py-3 px-4 '>Send Query</button>
+            </form>
           </div>
           
           <div className="lg:w-2/3 bg-gray-100 rounded-lg overflow-hidden shadow-lg">
