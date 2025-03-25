@@ -207,15 +207,15 @@ const ACETestimonials = () => {
     <div className="bg-gray-50 py-12 px-4">
       <div className="max-w-full">
         <div className="md:text-center mb-12">
-          <h2 className={`${figtree.className} text-5xl max-md:text-3xl font-bold text-gray-900 mb-4`}>Real Success Stories</h2>
-          <p className="text-gray-600 max-w-2xl max-md:text-sm mx-auto">
+          <h2 data-aos="fade-up" className={`${figtree.className} text-5xl max-md:text-3xl font-bold text-gray-900 mb-4`}>Real Success Stories</h2>
+          <p data-aos="fade-up" data-aos-delay="100" className="text-gray-600 max-w-2xl max-md:text-sm mx-auto">
             Hear from our students who successfully achieved their study abroad dreams with ACE's guidance
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div data-aos="fade-up" data-aos-delay="200" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} />
+            <TestimonialCard  key={index} {...testimonial} />
           ))}
         </div>
       </div>

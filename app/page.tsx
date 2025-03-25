@@ -160,12 +160,15 @@ const page = () => {
         </div>
         <div className="max-md:overflow-hidden">
           <img
+          data-aos="fade-left"
             draggable="false"
             src="/bg-arrow.svg"
             alt=""
             className="absolute -top-2 max-md:-top-20 right-0 md:h-full max-md:size-56 w-fit z-0"
           />
           <img
+                    data-aos="fade-left"
+
             draggable="false"
             src="/bg-arrow.svg"
             alt=""
@@ -396,12 +399,12 @@ const page = () => {
         <div className="flex h-full max-md:flex-col max-md:items-start items-center max-md:gap-4 justify-between">
           <div className="flex flex-col gap-4 md:w-1/2">
             <div className="flex flex-col gap-2">
-              <p className="text-green-800">Our Promise</p>
-              <h1 className={`${figtree.className} text-5xl max-md:text-3xl font-semibold`}>
+              <p data-aos="fade-up" className="text-green-800">Our Promise</p>
+              <h1 data-aos="fade-up" data-aos-delay="200" className={`${figtree.className} text-5xl max-md:text-3xl font-semibold`}>
                 We don’t just prepare <br /> you for exams
               </h1>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="300">
               <p className="text-slate-500 max-md:text-sm">
                 We go beyond just helping you pass exams—we equip you with the
                 knowledge, skills, and confidence needed to excel in your career
@@ -413,7 +416,7 @@ const page = () => {
                 just for tests, but for a successful and fulfilling future.
               </p>
             </div>
-            <form
+            <form data-aos="fade-up" data-aos-delay="400"
               action=""
               className="flex items-center ring-1 ring-slate-200 w-fit rounded-xl overflow-hidden"
             >
@@ -435,7 +438,7 @@ const page = () => {
               alt=""
               className="object-cover md:w-full h-full rounded-bl-full"
             />
-            <div className=" absolute bottom-10 -left-10 max-md:left-0 ring-1 ring-slate-300 text-black bg-white px-4 py-2 rounded-full  ">
+            <div data-aos="zoom-in"  className=" absolute bottom-10 -left-10 max-md:left-0 ring-1 ring-slate-300 text-black bg-white px-4 py-2 rounded-full  ">
               <img src="/AI.png" alt="" />
               <p>Commited to serve Excellence</p>
             </div>

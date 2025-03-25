@@ -34,13 +34,13 @@ const ImprovedCTA = () => {
   };
 
   return (
-    <div className="m-5  text-black bg-[url('/cta_img.jpeg')] bg-no-repeat ring-1  ring-slate-300  rounded-xl bg-right from-green-500 to-green-200 p-15 rounded-">
-      <div className="mx-auto">
-        <h2 className="max-md:text-3xl text-4xl font-bold mb-4">
+    <div className="m-5  text-black bg-[url('/cta_img.jpeg')] bg-no-repeat ring-1  ring-slate-300  rounded-xl bg-right from-green-500 to-green-200 md:p-15 px-5 py-10 rounded-">
+      <div className="md:mx-auto">
+        <h2 className="max-md:text-3xl text-4xl font-bold mb-4 max-md:text-white">
           Take the First Step Towards Your Success!
         </h2>
-        <p className="max-md:text-sm text-slate-400 mb-6">
-          Start your journey with The A.C.E. today! Get expert training, flexible learning, and proven success strategies.
+        <p className="max-md:text-sm md:text-slate-400 max-md:text-slate-200  mb-6">
+          Start your journey with The A.C.E. today! Get expert training, flexible learning, and proven <span className="bg-green-800 text-white px-2 ml-2 "> <i>success strategies</i></span> 
         </p>
 
         {!submitted ? (
@@ -65,7 +65,7 @@ const ImprovedCTA = () => {
                 type="submit"
                 className={`${
                   isLoading ? "bg-green-600" : "bg-green-700 hover:bg-green-600"
-                } border-l-2 text-white font-semibold px-6 py-3 rounded-r-lg md:rounded-l-none rounded-l-lg transition cursor-pointer duration-300`}
+                } md:border-l-2 max-md:mt-6 text-white font-semibold px-6 py-3 rounded-r-lg md:rounded-l-none rounded-l-lg transition cursor-pointer duration-300`}
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -85,8 +85,8 @@ const ImprovedCTA = () => {
         ) : (
           <>
             <div className="bg-green-700 p-6 rounded-lg text-center">
-              <p className="text-xl mb-2">Thank you for reaching out!</p>
-              <p>
+              <p className="text-xl mb-2 text-white">Thank you for reaching out!</p>
+              <p className="text-white">
                 We&apos;ll contact you shortly to schedule your free consultation.
               </p>
               <button
@@ -94,7 +94,7 @@ const ImprovedCTA = () => {
                   setSubmitted(false);
                   setContactInfo("");
                 }}
-                className="mt-4 underline hover:text-purple-200"
+                className="text-white mt-4 underline hover:text-purple-200"
               >
                 Submit another request
               </button>
@@ -102,8 +102,8 @@ const ImprovedCTA = () => {
           </>
         )}
 
-        <div className="mt-8 flex flex-col md:flex-row items-center justify-center md:justify-between">
-          <p className="text-green-600 mb-4 md:mb-0">
+        <div className="mt-8 flex flex-col md:flex-row md:items-center justify-center md:justify-between">
+          <p className="text-green-600 max-md:text-green-400 mb-4 md:mb-0">
             Don&apos;t wait—your future starts now!
           </p>
           <div className="flex items-center gap-2">

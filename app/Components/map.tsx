@@ -1,36 +1,17 @@
 import React from 'react';
-import { MapPin, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react';
 import { Figtree } from 'next/font/google';
-import { PinIcon } from 'lucide-react';
-
-
+import Image from 'next/image';
 const figtree = Figtree({
-    subsets:['latin']
-})
+    subsets: ['latin']
+});
 
 const LocationSection = () => {
     return (
-        <div className="bg-gray-100 min-h-screen flex items-center justify-center md:p-14">
-            <div className="w-full relative flex flex-row-reverse ">
-                {/* Header Section */}
-                <div className="mb-2">
-                    <h2 className={`${figtree.className} text-4xl font-normal text-gray-800`}>Our Location</h2>
-                    <h1 className={`${figtree.className} text-5xl font-semibold text-gray-900 mt-4`}>Connecting Near and Far</h1>
-                    <div className='mt-6 flex  flex-col gap-3'>
-                        <div className='flex gap-3 items-center'>
-                        <PinIcon/>
-                        <h2 className='font-semibold text-green-800 text-xl'>Headquarters</h2>
-                        </div>
-      
-                        <div>
-                        <p className='text-2xl'>124 City Road, London, <br /> EC1V 2NX</p>
-                        </div>
-                       
-                    </div>
-                </div>
-
-                {/* Map Container */}
-                <div className="relative w-1/2 bg-white rounded-lg overflow-hidden shadow-lg h-96">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex items-center justify-center p-6 md:p-10">
+            <div className="mx-auto grid md:grid-cols-2 gap-12 items-center">
+                {/* Map Visualization */}
+                <div className="relative w-full bg-white rounded-2xl shadow-2xl overflow-hidden h-[500px]">
                     {/* Map Background with SVG Pattern */}
                     <div className="absolute inset-0 bg-gray-100">
                         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -80,8 +61,10 @@ const LocationSection = () => {
                                 <h3 className="font-bold text-lg">A.C.E Inc.</h3>
                             </div>
                             <p className="text-sm font-medium text-gray-700 mb-1">Great Teams Unite Together</p>
-                            <p className="text-sm text-gray-600 mb-1">San Francisco, USA</p>
-                            <p className="text-sm text-gray-600 mb-3">123 Tech Boulevard, Suite 456</p>
+                            <p className="text-sm text-gray-600 mb-1">London, UK</p>
+                            <p className="text-sm text-gray-600 mb-3">124 City Road, London, EC1V 2NX
+
+</p>
 
                             <a href="#" className="flex items-center text-sm text-green-500 font-medium">
                                 <span>Open Google Maps</span>
@@ -92,11 +75,66 @@ const LocationSection = () => {
 
                     {/* Branding Card */}
                     <div className="absolute bottom-10 right-10 z-10 px-6 bg-white">
-                        <img src="Ace logo.jpg" alt="" width={100} height={100} />
+                        <Image src="/Ace logo.jpg" alt="" width={100} height={100} />
                     </div>
                 </div>
 
+                {/* Content Section */}
+                <div className="space-y-6">
+                    <div>
+                        <p className="text-green-600 font-medium uppercase tracking-wider mb-3">Our Headquarters</p>
+                        <h1 className={`${figtree.className} max-md:text-3xl text-5xl font-bold text-gray-900 leading-tight`}>
+                            Connecting Near and Far
+                        </h1>
+                        <p className="text-xl text-gray-600 mt-4 max-md:text-sm">
+                            Bridging distances with innovative solutions <br className='md:hidden' /> and global connectivity.
+                        </p>
+                    </div>
 
+                    {/* Contact Details */}
+                    <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-100">
+                        <div className="space-y-4">
+                            <div className="flex items-center space-x-4">
+                                <div className="bg-green-100 p-3 rounded-full">
+                                    <MapPin className="text-green-600" size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-gray-800">Location</h3>
+                                    <p className="text-gray-600">124 City Road, London, EC1V 2NX</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center space-x-4">
+                                <div className="bg-blue-100 p-3 rounded-full">
+                                    <Phone className="text-blue-600" size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-gray-800">Phone</h3>
+                                    <p className="text-gray-600">+44 20 1234 5678</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center space-x-4">
+                                <div className="bg-purple-100 p-3 rounded-full">
+                                    <Mail className="text-purple-600" size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-gray-800">Email</h3>
+                                    <p className="text-gray-600">contact@aceinc.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Google Maps Link */}
+                    <a 
+                        href="#" 
+                        className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors duration-300"
+                    >
+                        <ExternalLink className="mr-2" size={18} />
+                        Open in Google Maps
+                    </a>
+                </div>
             </div>
         </div>
     );

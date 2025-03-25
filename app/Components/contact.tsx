@@ -44,7 +44,7 @@ export default function ContactSection() {
 
   return (
     <div className="relative bg-gray-50 min-h-screen md:p-10">
-      <div className='z-0 absolute w-20 h-20 bg-blue-100 blur-xl rounded-full'>
+      <div className='z-0 absolute w-20 h-20 bg-blue-100 blur-xl rounded-full top-0'>
 
       </div>
       {/* Main Content */}
