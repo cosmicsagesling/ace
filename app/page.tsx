@@ -120,7 +120,7 @@ const Course = [
 
 const page = () => {
   return (
-    <main className="">
+    <main className="overflow-hidden">
 
       {/* Hero section */}
       <section className="overflow-hidden relative max-md:h-full max-md:py-32 h-[90dvh] flex flex-col gap-4 items-center justify-center w-full bg-gradient-to-t from-green-200 via-white to-white ">
@@ -150,7 +150,7 @@ const page = () => {
           <img
             src="/Frame 576.svg"
             alt=""
-            className="absolute top-10 right-10 size-15 z-99 text-white "
+            className="absolute top-10 right-10 size-15 z-10 text-white "
           />
           <img
             src="/dot.svg"
@@ -180,17 +180,17 @@ const page = () => {
 
       {/* second sections */}
 
-      <section className="w-full mt-10 px-4 h-full">
+      <section className="w-full mt-10 px-4 py-44 h-full">
         <div className="flex flex-col gap-3 items-center">
-          <p className="text-green-800 max-md:text-sm">
+          <p data-aos="zoom-in" className="text-green-800 max-md:text-sm">
             The <b>Trust</b> Students Keep on Us
           </p>
-          <h2 className="font-semibold text-5xl max-md:text-3xl">
+          <h2 data-aos="zoom-in" data-aos-delay="100" className="font-semibold text-5xl max-md:text-3xl">
             Why Choose Us !
           </h2>
         </div>
         <div className="mt-10 mx-auto grid md:grid-cols-3 gap-4 max-w-[1400px]">
-          <div className=" border-b-2 border-b-red-400 shadow-md shadow-red-300 w-full h-fit ring-1 ring-slate-200 flex flex-col gap-5 p-6 rounded-md">
+          <div data-aos="fade-right" className=" border-b-2 border-b-red-400 shadow-md shadow-red-300 w-full h-fit ring-1 ring-slate-200 flex flex-col gap-5 p-6 rounded-md">
             <div className="w-10 h-10 rounded-xl">
               <SlCalender className="w-8 h-8 text-red-500" />
             </div>
@@ -201,7 +201,7 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="border-b-2 border-b-green-400 shadow-md shadow-green-300 w-full h-full ring-1 ring-slate-200 flex flex-col gap-5 p-6 rounded-md">
+          <div data-aos="fade-up" className="border-b-2 border-b-green-400 shadow-md shadow-green-300 w-full h-full ring-1 ring-slate-200 flex flex-col gap-5 p-6 rounded-md">
             <div className="w-20 h-20 rounded-xl flex items-center justify-center">
               <BiUserCheck className="w-16 h-16 text-green-700" />
             </div>
@@ -213,7 +213,7 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="border-b-2 border-b-blue-500 shadow-md shadow-blue-400 w-full h-fit ring-1 ring-slate-200 flex flex-col gap-5 p-6 rounded-md">
+          <div data-aos="fade-left" className="border-b-2 border-b-blue-500 shadow-md shadow-blue-400 w-full h-fit ring-1 ring-slate-200 flex flex-col gap-5 p-6 rounded-md">
             <div className="w-10 h-10 bg-white rounded-xl">
               <GiGrowth className="w-9 h-9 text-blue-600" />
             </div>
@@ -228,25 +228,24 @@ const page = () => {
         </div>
       </section>
 
-      <section className="p-20 w-full">
+      <section className="md:p-20 py-16 px-6 w-full">
 
 <div className="flex flex-col  justify-between gap-10 ">
 
 <div>
-<h1 className="font-bold text-5xl ">Build Skills That Travel With You</h1>
-<p className="mt-5 text-slate-500">From language mastery to professional growth, our training domains are built to support your journey—wherever you aim to go.</p>
+<h1 data-aos="fade-right" className={`font-bold max-md:text-3xl text-5xl ${figtree.className} `}>Build Skills That Travels  <br className="md:hidden" /> With You</h1>
+<p data-aos="fade-right" data-aos-delay="160" className="mt-5 text-slate-500">From language mastery to professional growth, our training domains are built to support your journey—wherever you aim to go.</p>
 </div>
-  <div className="grid grid-cols-3 mt-6">
-    <div className="relative bg-white border-r-2 flex flex-col justify-center gap-6 p-10 row-span-2">
+  <div data-aos="fade-up" className="grid md:grid-cols-3 mt-6 ">
+    <div className="relative bg-white md:border-r-2 flex flex-col justify-center gap-6 md:p-10 p-6 md:row-span-2 max-md:border-l-2 max-md:border-b-2">
       <div className="absolute w-10 h-10 bg-green-400 layer blur-2xl right-10">
 
       </div>
-      <div className="absolute w-5 h-5 bg-red-600 left-20 top-40">
+      <div className="absolute w-5 h-5 bg-red-600 left-20 max-md:top-10 top-40">
 
       </div>
       <div className="p-10 w-fit bg-red-200/20 backdrop-blur-xl rounded-full flex items-center justify-center">
         <BookOpenCheck className="size-11 text-orange-800" />
-
       </div>
       <h2 className="font-semibold text-3xl ">English <span className="bg-clip-text bg-gradient-to-b from-green-600 to-green-700 text-transparent">Proficiency</span>
       </h2>
@@ -265,7 +264,7 @@ const page = () => {
 </p>
 
     </div>
-    <div className="bg-white flex flex-col gap-6 p-10 border-b-2 ">
+    <div className="bg-white flex flex-col gap-6 p-10 border-b-2 max-md:border-l-2 ">
       <BookOpenCheck className="size-11" />
       <h2 className="font-semibold text-3xl ">Foreign <span className={`${limelight.className} font-semibold bg-clip-text bg-gradient-to-b from-green-600 to-green-700 text-transparent  `}>Languages</span> 
       </h2>
@@ -276,7 +275,7 @@ const page = () => {
 </p>
 
     </div>
-    <div className="bg-white  border-r-2 flex flex-col gap-6 p-10 col-span-2">
+    <div className="bg-white  border-r-2 flex flex-col gap-6 p-10 md:col-span-2">
       <BookOpenCheck className="size-11" />
         <h2 className={`font-semibold text-3xl ${nabla.className} `}>Study Abroad  Guidance
 
@@ -300,13 +299,16 @@ const page = () => {
           <div className="relative md:w-1/2 ">
             <p
               data-aos="zoom-in"
-              className="absolute right-0 bottom-1/2 bg-white/40 backdrop-blur-xl rounded-full px-4 py-2  text-black text-center"
+              data-aos-duration="2000"
+              data-aos-delay="120"
+              className="absolute right-0 bottom-1/2 bg-white/40 backdrop-blur-xl rounded-full px-4 py-2 max-md:text-sm  text-black text-center"
             >
               🚀 Your #1 Destination <br /> for Global Learning
             </p>
             <p
               data-aos="zoom-out"
-              className="absolute left-0 top-1/2 bg-white/40 backdrop-blur-xl rounded-full px-4 py-2  text-black text-center"
+              data-aos-duration="2000"
+              className="absolute left-0 top-1/2 bg-white/40 backdrop-blur-xl rounded-full px-4 py-2  text-black max-md:text-sm text-center"
             >
               📈 Trusted by thousands. <br /> Built for your success.
             </p>
@@ -321,14 +323,14 @@ const page = () => {
           {/* second box */}
           <div className="md:w-1/2 flex flex-col gap-3">
             <div className="flex flex-col gap-3">
-              <p>Who and What ?</p>
-              <h1 className="font-semibold text-5xl max-md:text-3xl border-b-2 pb-3">
+              <p data-aos="zoom-out">Who and What ?</p>
+              <h1 data-aos="zoom-out" className="font-semibold text-5xl max-md:text-3xl border-b-2 pb-3">
                 Meet A.C.E
               </h1>
             </div>
 
-            <div>
-              <p className="text-slate-600 max-md:text-sm">
+            <div data-aos="fade-up">
+              <p  className="text-slate-600 max-md:text-sm">
                 We craft personalized training programs to{" "}
                 <b>bridge the gap </b> between education and real-world entities
                 . With elite trainers,
@@ -338,7 +340,7 @@ const page = () => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div data-aos="fade-up" className="flex flex-col gap-2">
               <p className="font-semibold">📚 About The A.C.E.</p>
               <p className="text-slate-600 max-md:text-sm">
                 As the prestigious training division of AMOS Global Solutions,
@@ -348,7 +350,7 @@ const page = () => {
               </p>
             </div>
 
-            <ul className="flex flex-col gap-3 mt-5">
+            <ul data-aos="fade-up" data-aos-delay="200" className="flex flex-col gap-3 mt-5">
               {[
                 {
                   title: "Elite Trainers",
@@ -395,7 +397,7 @@ const page = () => {
           <div className="flex flex-col gap-4 md:w-1/2">
             <div className="flex flex-col gap-2">
               <p className="text-green-800">Our Promise</p>
-              <h1 className="text-5xl max-md:text-3xl font-semibold">
+              <h1 className={`${figtree.className} text-5xl max-md:text-3xl font-semibold`}>
                 We don’t just prepare <br /> you for exams
               </h1>
             </div>

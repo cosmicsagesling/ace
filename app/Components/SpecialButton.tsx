@@ -9,7 +9,7 @@ export function SpecialButton() {
         containerClassName="rounded-full"
         as="a"
         href="https://amosglobalsolutions.com"
-        className=" bg-black text-white flex items-center space-x-2 px-8"
+        className="cursor-pointer bg-black text-white flex items-center space-x-2 px-8"
       >
         <span className="font-semibold">Get Started</span>
       </HoverBorderGradient>

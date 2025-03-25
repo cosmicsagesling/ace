@@ -1,18 +1,36 @@
 import React from 'react';
 import { MapPin, ExternalLink } from 'lucide-react';
+import { Figtree } from 'next/font/google';
+import { PinIcon } from 'lucide-react';
+
+
+const figtree = Figtree({
+    subsets:['latin']
+})
 
 const LocationSection = () => {
     return (
-        <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
-            <div className="max-w-4xl w-full relative">
+        <div className="bg-gray-100 min-h-screen flex items-center justify-center md:p-14">
+            <div className="w-full relative flex flex-row-reverse ">
                 {/* Header Section */}
                 <div className="mb-2">
-                    <h2 className="text-4xl font-bold text-gray-800">Our Location</h2>
-                    <h1 className="text-5xl font-bold text-gray-900">Connecting Near and Far</h1>
+                    <h2 className={`${figtree.className} text-4xl font-normal text-gray-800`}>Our Location</h2>
+                    <h1 className={`${figtree.className} text-5xl font-semibold text-gray-900 mt-4`}>Connecting Near and Far</h1>
+                    <div className='mt-6 flex  flex-col gap-3'>
+                        <div className='flex gap-3 items-center'>
+                        <PinIcon/>
+                        <h2 className='font-semibold text-green-800 text-xl'>Headquarters</h2>
+                        </div>
+      
+                        <div>
+                        <p className='text-2xl'>124 City Road, London, <br /> EC1V 2NX</p>
+                        </div>
+                       
+                    </div>
                 </div>
 
                 {/* Map Container */}
-                <div className="relative w-full bg-white rounded-lg overflow-hidden shadow-lg h-96">
+                <div className="relative w-1/2 bg-white rounded-lg overflow-hidden shadow-lg h-96">
                     {/* Map Background with SVG Pattern */}
                     <div className="absolute inset-0 bg-gray-100">
                         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +65,7 @@ const LocationSection = () => {
 
                     {/* Location Marker */}
                     <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
                             <div className="w-3 h-3 bg-white rounded-full"></div>
                         </div>
                     </div>
@@ -56,16 +74,16 @@ const LocationSection = () => {
                     <div className="absolute top-10 left-10 z-10">
                         <div className="bg-white rounded-lg shadow-lg p-4 w-64">
                             <div className="flex items-center mb-2">
-                                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2">
+                                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-2">
                                     <MapPin size={18} color="white" />
                                 </div>
-                                <h3 className="font-bold text-lg">Snappy Inc.</h3>
+                                <h3 className="font-bold text-lg">A.C.E Inc.</h3>
                             </div>
                             <p className="text-sm font-medium text-gray-700 mb-1">Great Teams Unite Together</p>
                             <p className="text-sm text-gray-600 mb-1">San Francisco, USA</p>
                             <p className="text-sm text-gray-600 mb-3">123 Tech Boulevard, Suite 456</p>
 
-                            <a href="#" className="flex items-center text-sm text-blue-500 font-medium">
+                            <a href="#" className="flex items-center text-sm text-green-500 font-medium">
                                 <span>Open Google Maps</span>
                                 <ExternalLink size={14} className="ml-1" />
                             </a>

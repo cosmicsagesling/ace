@@ -41,16 +41,16 @@ const FAQ = () => {
       answer: "A.C.E. offers flexible learning models, including online, in-person, and hybrid options to accommodate different preferences and schedules."
     },
     {
-      question: "Who are the trainers, and what makes them qualified?",
-      answer: "We practice proactive communication, personalized attention, and responsive support. Every client is assigned a dedicated account manager who ensures your needs are addressed promptly and that we consistently exceed your expectations."
+      question: "Do I need prior experience to enroll in ?",
+      answer: "No, The A.C.E. caters to all skill levels, from beginners to advanced learners, ensuring personalized learning paths for every student."
     },
     {
-      question: "What does your commitment to integrity and fairness mean for clients?",
-      answer: "It means transparent pricing with no hidden fees, honest communication about project timelines and challenges, and fair treatment of all stakeholders. We prioritize building long-term relationships based on trust rather than short-term gains."
+      question: "What are the benefits of enrolling at The A.C.E.?",
+      answer: "Students receive tailored coaching from expert trainers, AI-powered learning tools, real-world simulations, and globally recognized certifications, ensuring career and academic success."
     },
     {
-      question: "How do you handle project changes or new directions?",
-      answer: "In healthy partnerships, changing directions or launching new projects means combining underlying strengths and capacities with new energy and support. We embrace agility, leveraging our established expertise while bringing fresh perspectives to new challenges."
+      question: "How can I enroll or get a consultation?",
+      answer: "You can sign up for a free consultation or enroll by visiting The A.C.E.’s website, calling their contact number, or visiting their office."
     }
   ];
 
@@ -60,7 +60,7 @@ const FAQ = () => {
 
   return (
     <div className=" text-black py-16">
-      <div className=" px-10">
+      <div className=" md:px-10 p-5">
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/3">
             <h2 className="text-4xl font-bold mb-8">
