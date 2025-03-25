@@ -28,7 +28,7 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen } : {question:string, an
 };
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(1); // Set the second item open by default
+  const [openIndex, setOpenIndex] = useState(0); // Set the second item open by default
 
   const faqItems = [
     {
