@@ -6,7 +6,7 @@ import Footer from "./Components/Footer";
 import Banner from "./Components/Banner";
 import AOSInit from "./Components/AOS";
 import ImprovedCTA from "./Components/CTA";
-import FAQ from "./Components/faq";
+import AccordionDemo from "./Components/faq";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +37,7 @@ export default function RootLayout({
         <Banner />
         <Navbar />
         {children}
-        <FAQ/>
+      <AccordionDemo/>
 <ImprovedCTA/>
         <Footer/>
       </body>

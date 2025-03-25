@@ -34,7 +34,7 @@ const ImprovedCTA = () => {
   };
 
   return (
-    <div className="m-5 bg-green-100 text-black .com/premium_photo-1661928975475-57502a6e34a5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-right from-green-500 to-green-200 p-15 rounded-">
+    <div className="m-5  text-black bg-[url('/cta_img.jpeg')] bg-no-repeat ring-1  ring-slate-300  rounded-xl bg-right from-green-500 to-green-200 p-15 rounded-">
       <div className="mx-auto">
         <h2 className="max-md:text-3xl text-4xl font-bold mb-4">
           Take the First Step Towards Your Success!
@@ -49,7 +49,7 @@ const ImprovedCTA = () => {
 
             <form
               onSubmit={handleSubmit}
-              className="max-w-4xl mt-6 flex flex-col md:flex-row"
+              className="max-w-4xl mt-6  flex flex-col md:flex-row "
             >
               <div className="flex-grow">
                 <input
@@ -57,7 +57,7 @@ const ImprovedCTA = () => {
                   value={contactInfo}
                   onChange={(e) => setContactInfo(e.target.value)}
                   placeholder="Enter your email or mobile number"
-                  className="w-full px-4 py-3 rounded-l-lg md:rounded-l-lg md:rounded-r-none rounded-r-lg bg-white text-gray-800 focus:outline-none"
+                  className="w-full px-4 py-3 rounded-l-lg md:rounded-l-lg ring-1 ring-slate-300 md:rounded-r-none rounded-r-lg bg-white text-gray-800 focus:outline-none"
                   disabled={isLoading}
                 />
               </div>
@@ -103,7 +103,7 @@ const ImprovedCTA = () => {
         )}
 
         <div className="mt-8 flex flex-col md:flex-row items-center justify-center md:justify-between">
-          <p className="text-purple-100 mb-4 md:mb-0">
+          <p className="text-green-600 mb-4 md:mb-0">
             Don&apos;t wait—your future starts now!
           </p>
           <div className="flex items-center gap-2">

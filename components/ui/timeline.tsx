@@ -36,8 +36,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 md:px-4"
       ref={containerRef}
     >
-      <div className=" py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-5xl font-semibold mb-4 text-black dark:text-white max-w-4xl">
+      <div data-aos="fade-up" className=" py-20 px-4 md:px-8 lg:px-10">
+        <h2 className="text-lg md:text-5xl  max-md:text-3xl font-semibold mb-4 text-black dark:text-white max-w-4xl">
         The A.C.E. Journey
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">

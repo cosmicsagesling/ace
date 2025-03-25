@@ -6,6 +6,14 @@ import React from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { Figtree } from "next/font/google";
+
+
+const figtree = Figtree(
+  {
+    subsets:['latin']
+  }
+)
 
 const Navbar = () => {
   const [isHovered, setHovered] = useState(false);
@@ -45,9 +53,9 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="box-border z-50 w-full bg-white backdrop-blur-3xl px-6 py-2 border-b-2 border-b-slate-300 sticky top-0">
+    <header className="box-border z-50 w-full bg-white backdrop-blur-3xl px-6 py-2 border-b-2 border-b-slate-200 sticky top-0">
       <nav className="flex items-center justify-between">
-        <Image src={"https://www.gstatic.com/youtube/img/promos/growth/aa20dc50281b5b90da8cd2c3791c28ff8bc3674eff3b5a32ba8654f54d526b50_244x112.webp"} width={100} height={100} />
+        <Image alt="Ace Logo" src={"/Ace Logo.jpg"} width={100} height={100} />
 
         {/* Mobile Menu Trigger */}
         <div
@@ -59,7 +67,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="max-md:hidden flex gap-6">
-          <ul className="flex gap-4 items-center">
+          <ul className={`${figtree.className} flex gap-4 items-center`}>
             {navItems.map((item, index) => {
               return (
                 <li
