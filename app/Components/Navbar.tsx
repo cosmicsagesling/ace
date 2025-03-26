@@ -54,15 +54,18 @@ const Navbar = () => {
 
   // Handle body scroll when mobile menu is open
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    // Check if we're in a browser environment
+    if (typeof window !== 'undefined') {
+      if (isMobileMenuOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
 
-    return () => {
-      document.body.style.overflow = "auto";
-    };
+      return () => {
+        document.body.style.overflow = "auto";
+      };
+    }
   }, [isMobileMenuOpen]);
 
   return (
