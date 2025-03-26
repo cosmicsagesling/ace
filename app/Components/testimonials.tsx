@@ -63,7 +63,7 @@ const TestimonialCard = ({
               <video 
                 ref={videoRef}
                 src={videoUrl || ""}
-                poster={thumbnailUrl || imageUrl || "/api/placeholder/400/225"}
+                poster={thumbnailUrl || imageUrl || ""}
                 className="w-full h-full object-center bg-black"
                 muted={isMuted}
                 playsInline
@@ -196,7 +196,7 @@ const ACETestimonials = () => {
       university: "Aston University",
       universityLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRY5CNLrRGPxKFpX3KLbxMrGMwUvSgumB3jQ&s",
       review: "Excellent support from ACE throughout my application process. The team was responsive and knowledgeable.",
-      hasVideo: true,
+      hasVideo: false,
       videoUrl: "/T2.mov",
       thumbnailUrl: "/t2thumb.jpg",
       imageUrl: "/api/placeholder/400/225"

@@ -8,11 +8,9 @@ const figtree = Figtree({
 
 const LocationSection = () => {
     return (
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex items-center justify-center p-6 md:p-10">
-            <div className="mx-auto grid md:grid-cols-2 gap-12 items-center">
-                {/* Map Visualization */}
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex items-center justify-between p-6 md:p-10">
+            <div className="w-full grid md:grid-cols-2 gap-12">
                 <div className="relative w-full bg-white rounded-2xl shadow-2xl overflow-hidden h-[500px]">
-                    {/* Map Background with SVG Pattern */}
                     <div className="absolute inset-0 bg-gray-100">
                         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                             <defs>
@@ -28,30 +26,25 @@ const LocationSection = () => {
                             <rect width="100%" height="100%" fill="url(#smallGrid)" />
                             <rect width="100%" height="100%" fill="url(#grid)" />
 
-                            {/* Main "roads" */}
                             <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#d1d5db" strokeWidth="3" />
                             <line x1="0" y1="50%" x2="100%" y2="50%" stroke="#d1d5db" strokeWidth="3" />
 
-                            {/* Secondary "roads" */}
                             <line x1="25%" y1="0" x2="25%" y2="100%" stroke="#e5e7eb" strokeWidth="2" />
                             <line x1="75%" y1="0" x2="75%" y2="100%" stroke="#e5e7eb" strokeWidth="2" />
                             <line x1="0" y1="25%" x2="100%" y2="25%" stroke="#e5e7eb" strokeWidth="2" />
                             <line x1="0" y1="75%" x2="100%" y2="75%" stroke="#e5e7eb" strokeWidth="2" />
 
-                            {/* Terrain features - like water */}
                             <rect x="60%" y="60%" width="40%" height="40%" fill="#bfdbfe" fillOpacity="0.3" />
                             <path d="M 0 80% Q 25% 70%, 50% 85%, 75% 75%, 100% 90%" fill="none" stroke="#93c5fd" strokeWidth="2" />
                         </svg>
                     </div>
 
-                    {/* Location Marker */}
                     <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
                             <div className="w-3 h-3 bg-white rounded-full"></div>
                         </div>
                     </div>
 
-                    {/* Location Card */}
                     <div className="absolute top-10 left-10 z-10">
                         <div className="bg-white rounded-lg shadow-lg p-4 w-64">
                             <div className="flex items-center mb-2">
@@ -73,13 +66,11 @@ const LocationSection = () => {
                         </div>
                     </div>
 
-                    {/* Branding Card */}
                     <div className="absolute bottom-10 right-10 z-10 px-6 bg-white">
                         <Image src="/Ace logo.jpg" alt="" width={100} height={100} />
                     </div>
                 </div>
 
-                {/* Content Section */}
                 <div className="space-y-6">
                     <div>
                         <p className="text-green-600 font-medium uppercase tracking-wider mb-3">Our Headquarters</p>
@@ -91,7 +82,6 @@ const LocationSection = () => {
                         </p>
                     </div>
 
-                    {/* Contact Details */}
                     <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-100">
                         <div className="space-y-4">
                             <div className="flex items-center space-x-4">
@@ -126,7 +116,6 @@ const LocationSection = () => {
                         </div>
                     </div>
 
-                    {/* Google Maps Link */}
                     <a 
                         href="#" 
                         className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors duration-300"

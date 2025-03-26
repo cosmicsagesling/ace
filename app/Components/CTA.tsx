@@ -7,12 +7,25 @@ const ImprovedCTA = () => {
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  // Regex for email and phone number validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
+    // Trim the input
+    const trimmedContactInfo = contactInfo.trim();
+
     // Validate input
-    if (!contactInfo.trim()) {
+    if (!trimmedContactInfo) {
       setError("Please enter your email or mobile number");
+      return;
+    }
+
+    // Check if input is a valid email or phone number
+    if (!emailRegex.test(trimmedContactInfo) && !phoneRegex.test(trimmedContactInfo)) {
+      setError("Please enter a valid email address or phone number");
       return;
     }
 
@@ -22,7 +35,7 @@ const ImprovedCTA = () => {
       
       // Simulate API call with timeout
       setTimeout(() => {
-        console.log("Contact info submitted:", contactInfo);
+        console.log("Contact info submitted:", trimmedContactInfo);
         setSubmitted(true);
         setLoading(false);
       }, 2000); // 2 seconds delay to show the loading state
@@ -45,7 +58,7 @@ const ImprovedCTA = () => {
 
         {!submitted ? (
           <div>
-            {error && <p className="text-red-200 text-sm mt-1">{error}</p>}
+            {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
 
             <form
               onSubmit={handleSubmit}

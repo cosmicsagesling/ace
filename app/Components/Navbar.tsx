@@ -3,7 +3,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import React from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Info, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Figtree } from "next/font/google";
@@ -88,7 +88,7 @@ const Navbar = () => {
                     item.href === pathname
                       ? "text-green-700 font-semibold"
                       : "text-gray-600"
-                  } hover:text-gray-500 text-sm`}
+                  } hover:text-green-500 text-sm`}
                 >
                   {item?.icon && (
                     <>
@@ -115,10 +115,58 @@ const Navbar = () => {
                 isCourse
                   ? "translate-y-0 opacity-100 visible"
                   : "-translate-y-1 opacity-0 invisible"
-              } transition-all duration-500 absolute w-96 h-96 top-22 bg-white ring-1 ring-slate-300 rounded-md p-6 shadow-lg`}
+              } transition-all duration-500 absolute w-96 h-96 space-y-5 top-22 bg-white ring-1 ring-slate-300 rounded-md p-6 shadow-lg`}
             >
-              <h1 className="font-semibold text-xl">Course Dropdown</h1>
-            </div>
+              
+              
+
+              <div className="flex flex-col gap-3">
+              <h1 className="font-semibold text-xl">Courses Offered</h1>
+              <div className="flex items-center gap-3">
+
+<Info className="text-slate-500" />
+  <p className="text-slate-500">Select any of the courses to know more.</p>
+</div>
+
+
+              </div>
+             
+              <div>
+              <a href="/courses/ielts" className="w-full cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200">
+                <div className="flex items-center gap-2">
+                <img src="https://seeklogo.com/images/I/ielts-logo-7E360077FE-seeklogo.com.png" alt="" width={50}  height={50}/>
+                <p>IELTS Preparation</p>
+                </div>
+                <ChevronRight className="text-slate-500"/>
+              </a>
+
+              <div className="w-full cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200">
+                <div className="flex items-center gap-2">
+                <img src="/images.png" alt="" width={50}  height={50}/>
+                <p>PTE Preparation</p>
+                </div>
+                <ChevronRight className="text-slate-500"/>
+              </div>
+              <div className="w-full h-14 cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200">
+                <div className="flex items-center gap-2">
+                <img src="https://www.ets.org/content/dam/ets-org/Rebrand/Logos/toefl-logo-periwinkle.svg" alt="" width={50}  height={50}/>
+                <p>TOEFL Preparation</p>
+                </div>
+                <ChevronRight className="text-slate-500"/>
+              </div>
+              <div className="w-full h-14 cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200">
+                <div className="flex items-center gap-2">
+                <img src="https://5.imimg.com/data5/ER/ZJ/SI/SELLER-13256372/oet-coaching-servoc-500x500.png" alt="" width={50}  height={50}/>
+                <p>OET Preparation</p>
+                </div>
+                <ChevronRight className="text-slate-500"/>
+              </div>
+
+
+             
+
+              </div>
+              </div>
           </ul>
 
           <button className="bg-gradient-to-r px-6 py-1.5 from-[#008A20] to-[#002408] rounded-full text-white h-fit w-fit text-sm">
