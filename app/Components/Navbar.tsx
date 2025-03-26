@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useEffect } from "react";
 import React from "react";
@@ -7,18 +5,17 @@ import { ChevronDown, ChevronRight, Info, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Figtree } from "next/font/google";
+import Link from "next/link";
 
-
-const figtree = Figtree(
-  {
-    subsets:['latin']
-  }
-)
+const figtree = Figtree({
+  subsets: ["latin"],
+});
 
 const Navbar = () => {
   const [isHovered, setHovered] = useState(false);
   const [isCourse, setisCourse] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileCourseOpen, setIsMobileCourseOpen] = useState(false);
 
   const navItems = [
     { title: "Home", href: "/" },
@@ -28,8 +25,24 @@ const Navbar = () => {
       icon: "AI.png",
       dropdown: [
         {
-          subTitle: "Heading 1",
-          subLinks: [{ title: "Sub Heading 1", href: "/" }],
+          subTitle: "IELTS Preparation",
+          href:"/courses/ielts-preparation",
+          logo: "https://seeklogo.com/images/I/ielts-logo-7E360077FE-seeklogo.com.png"
+        },
+        {
+          subTitle: "PTE Preparation",
+          href:"/courses/pte-preparation",
+          logo: "/images.png"
+        },
+        {
+          subTitle: "TOEFL Preparation",
+          href:"/courses/toefl-preparation",
+          logo: "https://www.ets.org/content/dam/ets-org/Rebrand/Logos/toefl-logo-periwinkle.svg"
+        },
+        {
+          subTitle: "OET Preparation",
+          href:"/courses/oet-preparation",
+          logo: "https://5.imimg.com/data5/ER/ZJ/SI/SELLER-13256372/oet-coaching-servoc-500x500.png"
         },
       ],
     },
@@ -90,16 +103,20 @@ const Navbar = () => {
                       : "text-gray-600"
                   } hover:text-green-500 text-sm`}
                 >
-                  {item?.icon && (
-                    <>
-                      <img src="/ai.png" alt="" className="w-5 h-5" />
-                    </>
+                  {item.icon && (
+                    <Image 
+                      src="/ai.png" 
+                      alt="AI Icon" 
+                      width={20} 
+                      height={20} 
+                      className="w-5 h-5" 
+                    />
                   )}
                   <a href={item.href}>{item.title}</a>
                   {item.dropdown && (
                     <ChevronDown
                       className={`transition-all ${
-                        isHovered && "rotate-180"
+                        isHovered ? "rotate-180" : ""
                       } w-4 h-4`}
                     />
                   )}
@@ -117,56 +134,37 @@ const Navbar = () => {
                   : "-translate-y-1 opacity-0 invisible"
               } transition-all duration-500 absolute w-96 h-96 space-y-5 top-22 bg-white ring-1 ring-slate-300 rounded-md p-6 shadow-lg`}
             >
-              
-              
-
               <div className="flex flex-col gap-3">
-              <h1 className="font-semibold text-xl">Courses Offered</h1>
-              <div className="flex items-center gap-3">
-
-<Info className="text-slate-500" />
-  <p className="text-slate-500">Select any of the courses to know more.</p>
-</div>
-
-
+                <h1 className="font-semibold text-xl">Courses Offered</h1>
+                <div className="flex items-center gap-3">
+                  <Info className="text-slate-500" />
+                  <p className="text-slate-500">
+                    Select any of the courses to know more.
+                  </p>
+                </div>
               </div>
-             
+
               <div>
-              <a href="/courses/ielts" className="w-full cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200">
-                <div className="flex items-center gap-2">
-                <img src="https://seeklogo.com/images/I/ielts-logo-7E360077FE-seeklogo.com.png" alt="" width={50}  height={50}/>
-                <p>IELTS Preparation</p>
-                </div>
-                <ChevronRight className="text-slate-500"/>
-              </a>
-
-              <div className="w-full cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200">
-                <div className="flex items-center gap-2">
-                <img src="/images.png" alt="" width={50}  height={50}/>
-                <p>PTE Preparation</p>
-                </div>
-                <ChevronRight className="text-slate-500"/>
+                {navItems.find(item => item.title === "Courses")?.dropdown?.map((course, index) => (
+                  <Link
+                    key={index}
+                    href={course.href}
+                    className="w-full cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={course.logo}
+                        alt={`${course.subTitle} logo`}
+                        width={50}
+                        height={50}
+                      />
+                      <p>{course.subTitle}</p>
+                    </div>
+                    <ChevronRight className="text-slate-500" />
+                  </Link>
+                ))}
               </div>
-              <div className="w-full h-14 cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200">
-                <div className="flex items-center gap-2">
-                <img src="https://www.ets.org/content/dam/ets-org/Rebrand/Logos/toefl-logo-periwinkle.svg" alt="" width={50}  height={50}/>
-                <p>TOEFL Preparation</p>
-                </div>
-                <ChevronRight className="text-slate-500"/>
-              </div>
-              <div className="w-full h-14 cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200">
-                <div className="flex items-center gap-2">
-                <img src="https://5.imimg.com/data5/ER/ZJ/SI/SELLER-13256372/oet-coaching-servoc-500x500.png" alt="" width={50}  height={50}/>
-                <p>OET Preparation</p>
-                </div>
-                <ChevronRight className="text-slate-500"/>
-              </div>
-
-
-             
-
-              </div>
-              </div>
+            </div>
           </ul>
 
           <button className="bg-gradient-to-r px-6 py-1.5 from-[#008A20] to-[#002408] rounded-full text-white h-fit w-fit text-sm">
@@ -185,7 +183,10 @@ const Navbar = () => {
         >
           <div className="flex flex-col h-full justify-between p-8">
             <ul className="flex flex-col gap-8 items-start mb-12">
-              <li className="w-full flex item-end justify-end " onClick={() => setIsMobileMenuOpen(false)}>
+              <li
+                className="w-full flex item-end justify-end "
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 <X />
               </li>
               {navItems.map((item, index) => (
@@ -195,7 +196,7 @@ const Navbar = () => {
                     isMobileMenuOpen
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
-                  } transition-all duration-300 ease-out delay-${index * 100}`}
+                  } transition-all duration-300 ease-out delay-${index * 100} w-full`}
                   style={{
                     transitionDelay: `${index * 100}ms`,
                     transform: isMobileMenuOpen
@@ -204,17 +205,65 @@ const Navbar = () => {
                     opacity: isMobileMenuOpen ? 1 : 0,
                   }}
                 >
-                  <a
-                    href={item.href}
-                    className={`text-xl font-medium ${
-                      item.href === pathname
-                        ? "text-green-800 font-bold"
-                        : "text-black/80"
-                    }`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.title}
-                  </a>
+                  {item.dropdown ? (
+                    <div className="w-full">
+                      <div 
+                        className="flex justify-between items-center w-full"
+                        onClick={() => setIsMobileCourseOpen(!isMobileCourseOpen)}
+                      >
+                        <a
+                          href={item.href}
+                          className={`text-xl font-medium ${
+                            item.href === pathname
+                              ? "text-green-800 font-bold"
+                              : "text-black/80"
+                          }`}
+                        >
+                          {item.title}
+                        </a>
+                        <ChevronDown 
+                          className={`transition-transform ${
+                            isMobileCourseOpen ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </div>
+                      
+                      {/* Mobile Course Dropdown */}
+                      {isMobileCourseOpen && item.dropdown && (
+                        <div className="ml-4 mt-4 space-y-3">
+                          {item.dropdown.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={subItem.href}
+                              className="flex items-center gap-3 py-2 px-3 bg-gray-100 rounded-md hover:bg-gray-200"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              <Image 
+                                src={subItem.logo} 
+                                alt={`${subItem.subTitle} logo`} 
+                                width={40}
+                                height={40}
+                                className="w-10 h-10 object-contain"
+                              />
+                              {subItem.subTitle}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className={`text-xl font-medium ${
+                        item.href === pathname
+                          ? "text-green-800 font-bold"
+                          : "text-black/80"
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.title}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -238,8 +287,5 @@ const Navbar = () => {
     </header>
   );
 };
-
-// Add this to your global CSS (e.g., globals.css)
-// Or you can add it inline in a style tag if you prefer
 
 export default Navbar;

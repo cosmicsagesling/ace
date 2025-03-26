@@ -15,7 +15,7 @@ const figtree = Figtree({
     subsets : ['latin']
 })
 
-const IELTSFeatures = () => {
+const CourseFeatures = ({title}:{title:string}) => {
   const features = [
     {
       icon: Headphones,
@@ -72,10 +72,10 @@ const IELTSFeatures = () => {
     <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className={` ${figtree.className} text-3xl font-extrabold text-gray-900 sm:text-4xl`}>
-            What You Get with Our IELTS Program
+          <h2 className={` ${figtree.className} text-3xl font-bold text-gray-900 md:text-4xl`}>
+            What You Get with Our {title} Program
           </h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 md:text-md text-gray-600 max-w-3xl mx-auto">
             More than just classes – we equip you with the tools, tips, and personal guidance to ace the exam.
           </p>
         </div>
@@ -103,4 +103,4 @@ const IELTSFeatures = () => {
   );
 };
 
-export default IELTSFeatures;
+export default CourseFeatures;

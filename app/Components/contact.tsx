@@ -15,12 +15,12 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: string; value: string; }; }) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -103,7 +103,7 @@ export default function ContactSection() {
             
             {submitSuccess ? (
               <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-                Thank you for contacting us! We'll get back to you shortly.
+                Thank you for contacting us! We&apos;ll get back to you shortly.
               </div>
             ) : null}
             
@@ -194,7 +194,7 @@ export default function ContactSection() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows="5"
+                  rows={5}
                   placeholder="How can we help?"
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
                   required

@@ -209,7 +209,7 @@ const ACETestimonials = () => {
         <div className="md:text-center mb-12">
           <h2 data-aos="fade-up" className={`${figtree.className} text-5xl max-md:text-3xl font-bold text-gray-900 mb-4`}>Real Success Stories</h2>
           <p data-aos="fade-up" data-aos-delay="100" className="text-gray-600 max-w-2xl max-md:text-sm mx-auto">
-            Hear from our students who successfully achieved their study abroad dreams with ACE's guidance
+            Hear from our students who successfully achieved their study abroad dreams with ACE&apos;s guidance
           </p>
         </div>
         

@@ -1,22 +1,23 @@
 import React from 'react'
-import IELTSHeroSection from '@/app/Components/Courses/ielts/sections/hero'
-import IELTSFeatures from '@/app/Components/Courses/ielts/sections/Benefits'
+import CourseFeatures from '@/app/Components/Courses/ielts/sections/Benefits'
 import BlogLinksSection from '@/app/Components/Courses/ielts/sections/blog'
+import CourseHeroSection from '@/app/Components/Courses/ielts/sections/hero'
+
 
 const page = () => {
   return (
     <main>
 
         <section>
-            <IELTSHeroSection/>
+            <CourseHeroSection title='IELTS'/>
         </section>
 
         <section>
-            <IELTSFeatures/>
+            <CourseFeatures title="IELTS"/>
         </section>
 
         <section>
-            <BlogLinksSection/>
+            <BlogLinksSection title='IELTS'/>
         </section>
     </main>
   )

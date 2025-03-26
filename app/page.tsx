@@ -10,8 +10,6 @@ import { SpecialButton } from "./Components/SpecialButton";
 import { BookOpenCheck, Check, Handshake } from "lucide-react";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import { TimelineDemo } from "./Components/Timeline";
-import ModernCourseCard from "./Components/courseCard";
-import AccordianDemo from "./Components/faq";
 import EdvoyTestimonials from "./Components/testimonials";
 import { Limelight, Tektur } from "next/font/google";
 
@@ -28,95 +26,6 @@ const limelight = Limelight({
 const nabla = Tektur({
   subsets: ["latin"],
 });
-
-
-const Course = [
-  {
-    id: 1,
-    course_title: "IELTS Mastery Program",
-    description: "Achieve your dream IELTS score with expert coaching, real-test simulations, and personalized feedback.",
-    timeline: "24 Days",
-    count: "3k+ Students",
-    overall_price: 99.00,
-    discount_price: 49.00,
-    category: "English Proficiency",
-    ratings: 4.9,
-    status: "Featured"
-  },
-  {
-    id: 2,
-    course_title: "PTE Success Program",
-    description: "Boost your PTE score with AI-driven practice, live training, and advanced test strategies.",
-    timeline: "20 Days",
-    count: "2.8k Students",
-    overall_price: 99.00,
-    discount_price: 45.00,
-    category: "English Proficiency",
-    ratings: 4.8,
-    status: "Featured"
-  },
-  {
-    id: 3,
-    course_title: "TOEFL Exam Prep",
-    description: "Comprehensive TOEFL training to improve academic English skills for university admissions.",
-    timeline: "25 Days",
-    count: "2k+ Students",
-    overall_price: 89.00,
-    discount_price: 44.00,
-    category: "English Proficiency",
-    ratings: 4.7,
-    status: "Popular"
-  },
-  {
-    id: 4,
-    course_title: "OET Training for Healthcare Professionals",
-    description: "Specialized OET coaching for medical professionals looking to work or study abroad.",
-    timeline: "30 Days",
-    count: "1.5k Students",
-    overall_price: 109.00,
-    discount_price: 55.00,
-    category: "English Proficiency",
-    ratings: 4.8,
-    status: "Featured"
-  },
-  {
-    id: 5,
-    course_title: "Advanced Business English",
-    description: "Enhance your communication skills with business-focused English training for professional growth.",
-    timeline: "30 Days",
-    count: "1.5k Students",
-    overall_price: 79.00,
-    discount_price: 39.00,
-    category: "Communication Mastery",
-    ratings: 4.7,
-    status: "Popular"
-  },
-  {
-    id: 6,
-    course_title: "Verbal Communication & Public Speaking",
-    description: "Master verbal fluency, storytelling, and presentation skills to boost confidence in public speaking.",
-    timeline: "21 Days",
-    count: "1.8k Students",
-    overall_price: 69.00,
-    discount_price: 35.00,
-    category: "Soft Skills",
-    ratings: 4.8,
-    status: "New"
-  },
-  {
-    id: 7,
-    course_title: "French for Beginners",
-    description: "Master French fundamentals and build fluency with native-level training.",
-    timeline: "45 Days",
-    count: "1.2k Students",
-    overall_price: 120.00,
-    discount_price: 60.00,
-    category: "Foreign Language Training",
-    ratings: 4.8,
-    status: "New"
-  }
-];
-
 
 const page = () => {
   return (

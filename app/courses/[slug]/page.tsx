@@ -1,46 +1,53 @@
-"use client"
-import React, { useState } from 'react';
-import { useParams, notFound } from 'next/navigation';
-import { Globe, BookOpen, Timer, CheckCircle2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { mockTestData } from '@/app/data/types/mockTestData';
+"use client";
+import React, { useState } from "react";
+import { useParams, notFound } from "next/navigation";
+import { CheckCircle2, Timer } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { mockTestData, MockTest, IconMap } from "@/app/data/types/mockTestData";
 
-type UserAnswers = Record<string, string>;
+// Type for user answers with more precise typing
+type UserAnswers = Record<string, string | undefined>;
 
-export function CourseMockTest() {
+const CourseMockTest = () => {
   const params = useParams();
   const slug = params.slug as string;
-  const test = mockTestData[slug];
+  const test: MockTest | undefined = mockTestData[slug];
 
+  // Explicitly type state variables
   const [userAnswers, setUserAnswers] = useState<UserAnswers>({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [score, setScore] = useState(0);
-  const [openResultModal, setOpenResultModal] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+  const [score, setScore] = useState<number>(0);
+  const [openResultModal, setOpenResultModal] = useState<boolean>(false);
 
+  // Early return with type-safe check
   if (!test) return notFound();
 
-  const IconMap = {
-    'Globe': Globe,
-    'BookOpen': BookOpen
-  };
-  const TestIcon = IconMap[test.icon as keyof typeof IconMap] || Globe;
+  // Type-safe icon selection with fallback
+  const TestIcon =
+    IconMap[test.icon as keyof typeof IconMap] || IconMap["Globe"];
 
-  const handleAnswerChange = (questionId: string, answer: string) => {
-    setUserAnswers(prev => ({
+  // Type-annotated event handler
+  const handleAnswerChange = (questionId: string, answer: string): void => {
+    setUserAnswers((prev) => ({
       ...prev,
-      [questionId]: answer
+      [questionId]: answer,
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Type-annotated submit handler
+  const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
-    
+
+    // Type-safe score calculation
     const calculatedScore = test.questions.reduce((total, question) => {
-      return userAnswers[question.id] === question.answer 
-        ? total + 1 
-        : total;
+      return userAnswers[question.id] === question.answer ? total + 1 : total;
     }, 0);
 
     setScore(calculatedScore);
@@ -48,10 +55,24 @@ export function CourseMockTest() {
     setOpenResultModal(true);
   };
 
-  const resetTest = () => {
+  // Type-annotated reset function
+  const resetTest = (): void => {
     setUserAnswers({});
     setIsSubmitted(false);
     setOpenResultModal(false);
+  };
+
+  // Type-safe function to check if all questions are answered
+  const areAllQuestionsAnswered = (): boolean => {
+    return test.questions.every((q) => userAnswers[q.id] !== undefined);
+  };
+
+  // Determine result message with type safety
+  const getResultMessage = (): string => {
+    const totalQuestions = test.questions.length;
+    if (score === totalQuestions) return "Perfect score! Excellent job!";
+    if (score > totalQuestions / 2) return "Good performance. Keep practicing!";
+    return "You might want to review the material again.";
   };
 
   return (
@@ -60,12 +81,14 @@ export function CourseMockTest() {
         <CardHeader className="flex flex-row items-center gap-4">
           <TestIcon className="w-12 h-12 text-primary" />
           <div>
-            <h2 className='text-4xl font-semibold text-green-700 '>{test.title}</h2>
+            <h2 className="text-4xl font-semibold text-green-700">
+              {test.title}
+            </h2>
             <p className="text-muted-foreground">{test.description}</p>
           </div>
           <div className="ml-auto flex items-center gap-2">
             <Timer className="w-5 h-5" />
-            <span>{test.duration} Questions</span>
+            <span>{test.duration} Minutes</span>
           </div>
         </CardHeader>
         <CardContent>
@@ -76,15 +99,18 @@ export function CourseMockTest() {
                   {idx + 1}. {q.question}
                 </p>
                 {q.options.map((opt) => (
-                  <div 
-                    key={opt} 
+                  <div
+                    key={opt}
                     className={`
                       flex items-center gap-2 p-2 rounded-md cursor-pointer 
-                      ${isSubmitted && opt === q.answer 
-                        ? 'bg-green-100' 
-                        : isSubmitted && userAnswers[q.id] === opt && opt !== q.answer 
-                          ? 'bg-red-100' 
-                          : 'hover:bg-gray-100'
+                      ${
+                        isSubmitted && opt === q.answer
+                          ? "bg-green-100"
+                          : isSubmitted &&
+                            userAnswers[q.id] === opt &&
+                            opt !== q.answer
+                          ? "bg-red-100"
+                          : "hover:bg-gray-100"
                       }
                     `}
                   >
@@ -98,8 +124,8 @@ export function CourseMockTest() {
                       disabled={isSubmitted}
                       className="mr-2"
                     />
-                    <label 
-                      htmlFor={`${q.id}-${opt}`} 
+                    <label
+                      htmlFor={`${q.id}-${opt}`}
                       className="flex-1 cursor-pointer"
                     >
                       {opt}
@@ -120,10 +146,10 @@ export function CourseMockTest() {
               </div>
             ))}
             {!isSubmitted && (
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="w-full cursor-pointer bg-green-700 text-white rounded-xl py-3"
-                disabled={test.questions.some(q => !userAnswers[q.id])}
+                disabled={!areAllQuestionsAnswered()}
               >
                 Submit Test
               </button>
@@ -141,19 +167,13 @@ export function CourseMockTest() {
             <p className="text-xl font-bold mb-4">
               Your Score: {score} / {test.questions.length}
             </p>
-            <p className="text-muted-foreground mb-6">
-              {score === test.questions.length 
-                ? "Perfect score! Excellent job!" 
-                : score > test.questions.length / 2 
-                  ? "Good performance. Keep practicing!" 
-                  : "You might want to review the material again."}
-            </p>
+            <p className="text-muted-foreground mb-6">{getResultMessage()}</p>
             <Button onClick={resetTest}>Retake Test</Button>
           </div>
         </DialogContent>
       </Dialog>
     </main>
   );
-}
+};
 
 export default CourseMockTest;
