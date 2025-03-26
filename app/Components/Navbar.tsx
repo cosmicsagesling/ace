@@ -77,7 +77,7 @@ const Navbar = () => {
     return (
       <header className="box-border z-50 w-full bg-white backdrop-blur-3xl px-6 py-2 border-b-2 border-b-slate-200 sticky top-0">
         <nav className="flex items-center justify-between">
-          <Image alt="Ace Logo" src={"/Ace Logo.jpg"} width={100} height={100} />
+          <img alt="Ace Logo" src={"/Ace Logo.jpg"} width={100} height={100} />
         </nav>
       </header>
     );
@@ -86,7 +86,7 @@ const Navbar = () => {
   return (
     <header className="box-border z-50 w-full bg-white backdrop-blur-3xl px-6 py-2 border-b-2 border-b-slate-200 sticky top-0">
       <nav className="flex items-center justify-between">
-        <Image alt="Ace Logo" src={"/Ace Logo.jpg"} width={100} height={100} />
+        <img alt="Ace Logo" src={"/Ace Logo.jpg"} width={100} height={100} />
 
         {/* Mobile Menu Trigger */}
         <div
