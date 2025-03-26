@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import React from "react";
-import { ChevronDown, ChevronRight, Info, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Info, Menu, Sparkles, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Figtree } from "next/font/google";
@@ -122,13 +122,9 @@ const Navbar = () => {
                   } hover:text-green-500 text-sm`}
                 >
                   {item.icon && (
-                    <Image 
-                      src="/ai.png" 
-                      alt="AI Icon" 
-                      width={20} 
-                      height={20} 
-                      className="w-5 h-5" 
-                    />
+                   <Sparkles className={`transition-all ${
+                    isHovered ? "rotate-180" : ""
+                  } w-4 h-4`}/>
                   )}
                   <a href={item.href}>{item.title}</a>
                   {item.dropdown && (
@@ -185,9 +181,7 @@ const Navbar = () => {
             </div>
           </ul>
 
-          <button className="bg-gradient-to-r px-6 py-1.5 from-[#008A20] to-[#002408] rounded-full text-white h-fit w-fit text-sm">
-            Register Now
-          </button>
+          <a className="active:scale-95 px-6 py-2 rounded-full bg-green-800 text-white text-sm font-medium transition-all duration-200 hover:bg-green-700 hover:shadow-lg transform hover:-translate-y-0.5" href="/apply">Register Now</a>
         </div>
 
         {/* Mobile Menu - Curved Animation */}

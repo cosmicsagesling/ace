@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useParams, notFound } from "next/navigation";
-import { CheckCircle2, Timer } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
@@ -76,19 +76,17 @@ const CourseMockTest = () => {
   };
 
   return (
-    <main className="p-10 max-w-4xl mx-auto">
-      <Card>
-        <CardHeader className="flex flex-row items-center gap-4">
-          <TestIcon className="w-12 h-12 text-primary" />
+    <main className="md:p-10 max-w-full mx-auto bg-[url('https://cdn.svgator.com/images/2022/06/animated-svg-background-css.svg')]">
+      <Card className="mx-auto max-w-6xl" >
+        <CardHeader className="relative flex flex-row items-center gap-4 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnq7GKOPvZXT_57kDL8jeLAhVTzIbrnARPnQ&s')] py-20">
+          <TestIcon className="w-20 h-20 text-primary max-md:hidden" />
           <div>
-            <h2 className="text-4xl font-semibold text-green-700">
+            <h2 className="text-4xl max-md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-green-700 to-green-800">
               {test.title}
             </h2>
-            <p className="text-muted-foreground">{test.description}</p>
+            <p className="text-muted-foreground max-md:text-sm">{test.description}</p>
           </div>
           <div className="ml-auto flex items-center gap-2">
-            <Timer className="w-5 h-5" />
-            <span>{test.duration} Minutes</span>
           </div>
         </CardHeader>
         <CardContent>
@@ -151,7 +149,7 @@ const CourseMockTest = () => {
                 className="w-full cursor-pointer bg-green-700 text-white rounded-xl py-3"
                 disabled={!areAllQuestionsAnswered()}
               >
-                Submit Test
+                See the Score
               </button>
             )}
           </form>
