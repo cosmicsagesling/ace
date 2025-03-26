@@ -28,7 +28,7 @@ const Navbar = () => {
         {
           subTitle: "IELTS Preparation",
           href:"/courses/ielts-preparation",
-          logo: "https://seeklogo.com/images/I/ielts-logo-7E360077FE-seeklogo.com.png"
+          logo: "/ielts_logo.png"
         },
         {
           subTitle: "PTE Preparation",
@@ -169,7 +169,7 @@ const Navbar = () => {
                     href={course.href}
                     className="w-full cursor-pointer hover:bg-gray-100 flex items-center justify-between mt-2 px-4 py-1 rounded-sm ring-1 ring-slate-200"
                   >
-                    <div className="flex items-center gap-2">
+                    <div className="h-12 flex items-center gap-2">
                       <Image
                         src={course.logo}
                         alt={`${course.subTitle} logo`}

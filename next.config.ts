@@ -37,6 +37,15 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "seeklogo.com",
+      },
+      {
+        protocol: "https",
+        hostname: "5.imimg.com",
+      },
+     
+      {
+        protocol: "https",
         hostname: "brand.jhu.edu",
       },
       {
