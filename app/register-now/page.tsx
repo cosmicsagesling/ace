@@ -36,9 +36,9 @@ const StudentEssentialsHeader: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="flex items-center">
           {/* Text Content */}
-          <div className="w-1/2 pr-8">
+          <div className="md:w-1/2 pr-8">
             <div className="text-sm text-gray-500 mb-2">
-              Study Abroad, Overseas Educ... / Student Essentials Services...
+              The AMOS Center of Excellence.. / Register Now
             </div>
             <h1 className="text-4xl font-bold text-gray-800 mb-4">
               Student Essentials

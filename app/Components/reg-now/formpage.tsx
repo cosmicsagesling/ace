@@ -3,8 +3,7 @@
 import React, { useState, ChangeEvent } from "react";
 import Link from "next/link";
 import AnimatedSubmitButton from "./components/animate-button";
-import Lottie from "lottie-react";
-import animationData from "@/public/Tick.json";
+import { Ticket } from "lucide-react";
 
 
 // Define types for form data
@@ -386,8 +385,8 @@ const MultiStepForm: React.FC = () => {
               <div className="text-center">
                 <div>
                 <div className="flex items-center justify-center bg-white z-50">
-      <Lottie animationData={animationData} className="w-56 h-56" loop autoPlay />
-    </div>
+                <Ticket className="md:size-24" />
+                      </div>
                 </div>
                 <h1 className="font-semibold text-3xl">
                   Successfully Submitted

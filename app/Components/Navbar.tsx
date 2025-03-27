@@ -287,7 +287,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="py-3 border-t-2 border-t-slate-300">
-              <button
+              <a href={"/register-now"}
                 className={`bg-green-800 w-full border-t-2 px-8 py-3 rounded-full text-white font-semibold shadow-lg transform transition-all duration-500 ${
                   isMobileMenuOpen
                     ? "scale-100 opacity-100"
@@ -298,7 +298,7 @@ const Navbar = () => {
                 }}
               >
                 Register Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
