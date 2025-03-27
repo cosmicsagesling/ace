@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React, { useState, ChangeEvent } from "react";
-import AnimatedSubmitButton from "./components/animate-button";
 import Link from "next/link";
 
 // Define types for form data
@@ -458,10 +458,7 @@ const MultiStepForm: React.FC = () => {
                     </span>
                   </label>
                 </div>
-                <AnimatedSubmitButton
-                  isLoading={loading}
-                  onClick={handleSubmit}
-                />
+                <button>hey</button>
               </>
             )}
           </div>
