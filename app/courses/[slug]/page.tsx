@@ -11,6 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import Authorize from "@/app/Components/authorize";
 import { mockTestData, MockTest, IconMap } from "@/app/data/types/mockTestData";
 
 
@@ -226,7 +227,7 @@ const CourseMockTest = () => {
             ) : (
               <>
                 <CardHeader>
-<p>Done</p>                </CardHeader>
+<Authorize/>           </CardHeader>
                 <CardContent className="text-center">
                   <h1 className="font-semibold text-3xl">Successfully Authenticated</h1>
                   <p className="text-slate-500 mt-3">You may now proceed with the test!</p>

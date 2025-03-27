@@ -2,6 +2,8 @@
 "use client";
 import React, { useState, ChangeEvent } from "react";
 import Link from "next/link";
+import Authorize from "../authorize";
+import AnimatedSubmitButton from "./components/animate-button";
 
 // Define types for form data
 interface FormData {
@@ -37,7 +39,7 @@ interface Step {
 }
 
 const MultiStepForm: React.FC = () => {
-  const [currentStep, setCurrentStep] = useState<number>(4);
+  const [currentStep, setCurrentStep] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(false);
   const [submitClicked, setSubmitClicked] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>({
@@ -380,7 +382,7 @@ const MultiStepForm: React.FC = () => {
           <div className="pb-10">
             {submitClicked ? (
               <div className="text-center">
-                <h2>Done!</h2>
+                <Authorize />
                 <h1 className="font-semibold text-3xl">
                   Successfully Submitted
                 </h1>
@@ -458,7 +460,10 @@ const MultiStepForm: React.FC = () => {
                     </span>
                   </label>
                 </div>
-                <button>hey</button>
+                <AnimatedSubmitButton
+                  isLoading={loading}
+                  onClick={handleSubmit}
+                />
               </>
             )}
           </div>
