@@ -5,33 +5,33 @@ const LearningMethodSection = () => {
   const sections = [
     {
       id: '01',
-      title: 'Client Learning Programs',
+      title: 'Personalized Learning Approach',
       backgroundImage: 'https://images.unsplash.com/photo-1506377872008-6645d9d29ef7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Tailored learning solutions for client growth'
+      description: 'Customized training to fit your needs.'
     },
     {
       id: '02',
-      title: 'Partnership Ecosystem',
+      title: 'Expert-Led Coaching',
       backgroundImage: 'https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Collaborative networks driving innovation'
+      description: 'Learn from globally certified trainers.'
     },
     {
       id: '03',
-      title: 'New Business Innovation',
+      title: 'Real Test Simulations',
       backgroundImage: 'https://images.unsplash.com/photo-1659301254614-8d6a9d46f26a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Pioneering strategies for emerging markets'
+      description: 'Practice with full-length mock tests.'
     },
     {
       id: '04',
-      title: 'Digital Delivery Platform',
+      title: 'Interactive & Engaging Sessions',
       backgroundImage: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Seamless digital transformation solutions'
+      description: ' Live classes, discussions, and feedbac'
     }
   ];
 
   return (
     <section className="w-full flex h-[600px]">
-      {sections.map((section, index) => (
+      {sections.map((section) => (
         <div 
           key={section.id}
           className="relative flex-1 group overflow-hidden transition-all duration-500 ease-in-out hover:flex-[3]"

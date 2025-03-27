@@ -1,11 +1,13 @@
+import {heroui} from '@heroui/theme';
 /* eslint-disable @typescript-eslint/no-require-imports */
 // tailwind.config.js or tailwind.config.ts
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    './app/**/*.{js,jsx,ts,tsx}',
-    './components/**/*.{js,jsx,ts,tsx}',
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/@heroui/theme/dist/components/(date-picker|button|ripple|spinner|calendar|date-input|form|popover).js"
   ],
   theme: {
     extend: {
@@ -33,13 +35,7 @@ const config: Config = {
     }
   },
   },
-
-
-  
-  plugins: [
-    require('tailwindcss-animate'),
-    require('tailwindcss-motion')
-  ],
+  plugins: [require('tailwindcss-animate'),require('tailwindcss-motion'),heroui()],
 }
 
 export default config
