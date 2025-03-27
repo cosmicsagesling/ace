@@ -107,10 +107,11 @@ const CourseMockTest = () => {
         email: formData.email,
         authenticated: true
       }));
+      
+      setIsLoginOpen(false);
       await new Promise<void>((resolve) => {
         setTimeout(resolve, 2000);
       });
-      setIsLoginOpen(false);
       setAuthBox(false);
     }
     catch (e) {
@@ -118,7 +119,7 @@ const CourseMockTest = () => {
     }
     finally {
       await new Promise<void>((resolve) => {
-        setTimeout(resolve, 500);
+        setTimeout(resolve, 1500);
       });
       setIsLoading(false);
     }
