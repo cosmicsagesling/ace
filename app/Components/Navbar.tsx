@@ -47,9 +47,10 @@ const Navbar = () => {
         },
       ],
     },
-    { title: "Skills", href: "/Skills" },
+    { title: "Skill Development", href: "/skill-development" },
     { title: "Contact Us", href: "/contact-us" },
   ];
+
 
   const pathname = usePathname();
 
@@ -77,7 +78,10 @@ const Navbar = () => {
     return (
       <header className="box-border z-50 w-full bg-white backdrop-blur-3xl px-6 py-2 border-b-2 border-b-slate-200 sticky top-0">
         <nav className="flex items-center justify-between">
+          <Link href={"/"} title="Ace Logo">
           <img alt="Ace Logo" src={"/Ace Logo.jpg"} width={100} height={100} />
+
+          </Link>
         </nav>
       </header>
     );
@@ -86,7 +90,10 @@ const Navbar = () => {
   return (
     <header className="box-border z-50 w-full bg-white backdrop-blur-3xl px-6 py-2 border-b-2 border-b-slate-200 sticky top-0">
       <nav className="flex items-center justify-between">
+        <Link href={"/"} title="ACE LOGO">
         <img alt="Ace Logo" src={"/Ace Logo.jpg"} width={100} height={100} />
+
+        </Link>
 
         {/* Mobile Menu Trigger */}
         <div
@@ -122,14 +129,14 @@ const Navbar = () => {
                   } hover:text-green-500 text-sm`}
                 >
                   {item.icon && (
-                   <Sparkles className={`transition-all ${
+                   <Sparkles className={`transition-all  duration-300 ${
                     isHovered ? "rotate-180" : ""
                   } w-4 h-4`}/>
                   )}
                   <a href={item.href}>{item.title}</a>
                   {item.dropdown && (
                     <ChevronDown
-                      className={`transition-all ${
+                      className={`transition-all  duration-300 ${
                         isHovered ? "rotate-180" : ""
                       } w-4 h-4`}
                     />
@@ -218,7 +225,7 @@ const Navbar = () => {
                   }}
                 >
                   {item.dropdown ? (
-                    <div className="w-full">
+                    <div className="w-full transition-all">
                       <div 
                         className="flex justify-between items-center w-full"
                         onClick={() => setIsMobileCourseOpen(!isMobileCourseOpen)}
@@ -234,7 +241,7 @@ const Navbar = () => {
                           {item.title}
                         </a>
                         <ChevronDown 
-                          className={`transition-transform ${
+                          className={`transition-transform duration-300 ${
                             isMobileCourseOpen ? 'rotate-180' : ''
                           }`} 
                         />
@@ -242,7 +249,7 @@ const Navbar = () => {
                       
                       {/* Mobile Course Dropdown */}
                       {isMobileCourseOpen && item.dropdown && (
-                        <div className="ml-4 mt-4 space-y-3">
+                        <div className={`ml-1 mt-4 space-y-3 transition-all`}>
                           {item.dropdown.map((subItem, subIndex) => (
                             <Link
                               key={subIndex}
