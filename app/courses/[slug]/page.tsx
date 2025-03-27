@@ -3,8 +3,7 @@ import React, { FormEvent, useState, useEffect } from "react";
 import { useParams, notFound } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Authorize from "@/app/Components/authorize";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Figtree } from "next/font/google";
 import {
   Dialog,
@@ -227,8 +226,7 @@ const CourseMockTest = () => {
             ) : (
               <>
                 <CardHeader>
-                  <Authorize/>
-                </CardHeader>
+<p>Done</p>                </CardHeader>
                 <CardContent className="text-center">
                   <h1 className="font-semibold text-3xl">Successfully Authenticated</h1>
                   <p className="text-slate-500 mt-3">You may now proceed with the test!</p>

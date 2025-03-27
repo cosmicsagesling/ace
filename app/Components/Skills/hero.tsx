@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { ArrowRightIcon } from 'lucide-react';
 import { Figtree } from 'next/font/google';
 
