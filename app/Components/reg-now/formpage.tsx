@@ -2,7 +2,6 @@
 "use client";
 import React, { useState, ChangeEvent } from "react";
 import Link from "next/link";
-import Authorize from "../authorize";
 import AnimatedSubmitButton from "./components/animate-button";
 
 // Define types for form data
@@ -382,7 +381,7 @@ const MultiStepForm: React.FC = () => {
           <div className="pb-10">
             {submitClicked ? (
               <div className="text-center">
-                <Authorize />
+                <p>Done</p>
                 <h1 className="font-semibold text-3xl">
                   Successfully Submitted
                 </h1>
