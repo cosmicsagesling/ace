@@ -3,6 +3,9 @@
 import React, { useState, ChangeEvent } from "react";
 import Link from "next/link";
 import AnimatedSubmitButton from "./components/animate-button";
+import Lottie from "lottie-react";
+import animationData from "@/public/Tick.json";
+
 
 // Define types for form data
 interface FormData {
@@ -381,7 +384,11 @@ const MultiStepForm: React.FC = () => {
           <div className="pb-10">
             {submitClicked ? (
               <div className="text-center">
-                <p>Done</p>
+                <div>
+                <div className="flex items-center justify-center bg-white z-50">
+      <Lottie animationData={animationData} className="w-56 h-56" loop autoPlay />
+    </div>
+                </div>
                 <h1 className="font-semibold text-3xl">
                   Successfully Submitted
                 </h1>
