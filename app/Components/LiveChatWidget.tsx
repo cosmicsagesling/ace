@@ -24,7 +24,7 @@ const LiveChatWidget: React.FC = () => {
           shadow-xl hover:bg-blue-600 
           transition-all duration-300 
           flex items-center justify-center
-          animate-bounce hover:animate-none
+           hover:animate-none
         "
         aria-label="Open Live Chat"
       >
