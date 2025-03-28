@@ -7,7 +7,7 @@ const config: Config = {
   content: [
     "./app/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/@heroui/theme/dist/components/(date-picker|button|ripple|spinner|calendar|date-input|form|popover).js"
+    "./node_modules/@heroui/theme/dist/components/(date-picker|spinner|button|ripple|calendar|date-input|form|popover).js"
   ],
   theme: {
     extend: {

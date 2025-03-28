@@ -4,6 +4,7 @@ import React, { useState, ChangeEvent } from "react";
 import Link from "next/link";
 import AnimatedSubmitButton from "./components/animate-button";
 import { Ticket } from "lucide-react";
+import Loading from "@/app/loading";
 
 
 // Define types for form data
@@ -166,6 +167,7 @@ const MultiStepForm: React.FC = () => {
     switch (currentStep) {
       case 1:
         return (
+
           <div className="">
             <h2 className="text-2xl font-semibold mb-4">
               Step 1: Personal Information

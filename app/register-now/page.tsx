@@ -44,7 +44,7 @@ const StudentEssentialsHeader: React.FC = () => {
               Student Essentials
             </h1>
             <p className="text-lg text-gray-600 mb-6">
-              Discover recommended products for your study destination.
+              Get Personalized Free consult from the experts.
             </p>
           </div>
 
