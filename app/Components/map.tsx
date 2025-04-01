@@ -67,7 +67,7 @@ const LocationSection = () => {
                     </div>
 
                     <div className="absolute bottom-10 right-10 z-10 px-6 bg-white">
-                        <Image src="/Ace logo.jpg" alt="" width={100} height={100} />
+                        <Image src="/Ace logo.jpg" alt="ace logo" width={100} height={100} />
                     </div>
                 </div>
 

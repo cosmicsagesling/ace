@@ -12,24 +12,21 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <a href='https://theacetraining.com' className="text-2xl font-bold mb-2">
-              <Image src="/Ace Logo White.png" alt=""  width={150} height={150} />
+              <Image src="/Ace Logo White.png" alt="ace logo"  width={150} height={150} />
               </a>
               <p className="text-gray-400">Unlocking Global Opportunities with A.C.E , Your Partner</p>
             </div>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="bg-blue-600 hover:bg-blue-700 p-2 rounded-full transition duration-300">
+              <a href="https://www.facebook.com/amosglobalsolutions/" className="bg-blue-600 hover:bg-blue-700 p-2 rounded-full transition duration-300">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="bg-blue-500 hover:bg-blue-600 p-2 rounded-full transition duration-300">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="bg-pink-600 hover:bg-pink-700 p-2 rounded-full transition duration-300">
+              <a href="https://www.instagram.com/amosglobal_edu/" className="bg-pink-600 hover:bg-pink-700 p-2 rounded-full transition duration-300">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="bg-blue-700 hover:bg-blue-800 p-2 rounded-full transition duration-300">
+              <a href="https://www.linkedin.com/company/amos-global-solutions-limited" className="bg-blue-700 hover:bg-blue-800 p-2 rounded-full transition duration-300">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="bg-red-600 hover:bg-red-700 p-2 rounded-full transition duration-300">
+              <a href="https://www.youtube.com/@AmosGlobalSolutions" className="bg-red-600 hover:bg-red-700 p-2 rounded-full transition duration-300">
                 <Youtube size={20} />
               </a>
             </div>

@@ -1,6 +1,7 @@
 // types/mockTest.ts
 import { Globe, BookOpen } from 'lucide-react';
 
+
 export interface MockTestQuestion {
   id: string;
   question: string;
@@ -16,6 +17,9 @@ export interface MockTest {
   icon: string;
   duration: number;
   questions: MockTestQuestion[];
+  relatedTests?: string[]; // Add this field
+  relatedCourses?: string[]; // Add this field
+  relatedResources?: string[]; // Add this field
 }
 
 export const IconMap = {

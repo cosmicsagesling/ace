@@ -12,7 +12,7 @@ export function HoverBorderGradient({
   href,
   containerClassName,
   className,
-  as: Tag = "button",
+  as: Tag = "a",
   duration = 1,
   clockwise = true,
   ...props

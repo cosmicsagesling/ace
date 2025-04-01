@@ -13,6 +13,7 @@ import { TimelineDemo } from "./Components/Timeline";
 import EdvoyTestimonials from "./Components/testimonials";
 import { Limelight, Tektur } from "next/font/google";
 import { Metadata } from "next";
+import BacklinksSection from "./Components/backlinksection";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -81,12 +82,12 @@ const page = () => {
         <div>
           <img
             src="/Frame 576.svg"
-            alt=""
+            alt="dotter-pattern2"
             className="absolute top-10 right-10 size-15 z-10 text-white "
           />
           <img
             src="/dot.svg"
-            alt=""
+            alt="dotted-pattern"
             className="absolute bottom-0 left-10 size-15"
           />
         </div>
@@ -94,13 +95,13 @@ const page = () => {
           <img
             draggable="false"
             src="/bg-arrow.svg"
-            alt=""
+            alt="right-arrow"
             className="absolute -top-2 max-md:-top-20 right-0 md:h-full max-md:size-56 w-fit z-0"
           />
           <img
             draggable="false"
             src="/bg-arrow.svg"
-            alt=""
+            alt="left-arrow"
             className=" absolute md:-bottom-86 max-md:-bottom-10 left-0 rotate-180 md:h-full max-md:size-56 w-fit z-0"
           />
         </div>
@@ -248,7 +249,7 @@ const page = () => {
             <img
               className="rounded-t-full"
               src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              alt="meet-ace"
             />
           </div>
 
@@ -364,11 +365,11 @@ const page = () => {
           <div className="relative md:w-md w-full h-fit rounded-bl-full ">
             <img
               src="https://images.unsplash.com/photo-1576872381149-7847515ce5d8?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              alt="excellence"
               className="object-cover md:w-full h-full rounded-bl-full"
             />
             <div data-aos="zoom-in"  className=" absolute bottom-10 -left-10 max-md:left-0 ring-1 ring-slate-300 text-black bg-white px-4 py-2 rounded-full  ">
-              <img src="/AI.png" alt="" />
+              <img src="/AI.png" alt="sparkle" />
               <p>Commited to serve Excellence</p>
             </div>
           </div>
