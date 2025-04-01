@@ -63,10 +63,10 @@ const FAQ = () => {
       <div className=" md:px-10 p-5">
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/3">
-            <h2 className="text-4xl font-bold mb-8">
+            <h2 className="text-4xl max-md:text-3xl font-semibold md:mb-8 mb-3">
               Frequently Asked<br />Questions
             </h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-400 mb-8 ">
               Find answers to the most common questions about our services and approach.
             </p>
             <form action="" className='flex justify-betweem md:mr-10 ring-1  ring-slate-400 rounded-xl overflow-hidden pl-5 justify-between '>

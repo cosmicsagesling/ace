@@ -158,7 +158,7 @@ const CourseHeroSection = ({title}:{title:string}) => {
               Take a Free Mock Test
             </Link>
             <Link 
-              href="/consultation" 
+              href="/register-now" 
               className="px-6 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors"
             >
               Book a Free Consultation

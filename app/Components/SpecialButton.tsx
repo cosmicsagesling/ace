@@ -4,7 +4,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export function SpecialButton() {
   return (
-    <div data-aos="zoom-in" data-aos-delay="350" className="z-40 flex justify-center text-center">
+    <a href="/register-now" data-aos="zoom-in" data-aos-delay="350" className="z-40 flex justify-center text-center">
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="a"
@@ -13,7 +13,7 @@ export function SpecialButton() {
       >
         <span className="font-semibold">Get Started</span>
       </HoverBorderGradient>
-    </div>
+    </a>
   );
 }
 

@@ -1,5 +1,19 @@
 import React from 'react'
 import MultiStepForm from '../Components/reg-now/formpage'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Register for Expert Training | Start Your Success Journey with A.C.E.',
+  description: 'Take the first step towards your language certification success. Register for A.C.E.\'s IELTS, PTE, OET or TOEFL training programs and get a personalized learning plan from expert trainers.',
+  alternates: {
+    canonical: '/register-now',
+  },
+  openGraph: {
+    url: '/register-now',
+    title: 'Register for Expert Training | A.C.E.',
+    description: 'Take the first step towards your language certification success. Register for A.C.E.\'s expert training programs.',
+  },
+}
 
 const page = () => {
   return (

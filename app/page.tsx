@@ -2,7 +2,7 @@
 import React from "react";
 import { Figtree } from "next/font/google";
 import AvatarGroup from "./Components/small/AvatarGroup";
-
+import { OrganizationSchemaMarkup } from "./Components/SchemaMarkup";
 import { BiUserCheck } from "react-icons/bi";
 import { SlCalender } from "react-icons/sl";
 import { GiGrowth } from "react-icons/gi";
@@ -12,6 +12,7 @@ import { RetroGrid } from "@/components/magicui/retro-grid";
 import { TimelineDemo } from "./Components/Timeline";
 import EdvoyTestimonials from "./Components/testimonials";
 import { Limelight, Tektur } from "next/font/google";
+import { Metadata } from "next";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -27,10 +28,31 @@ const nabla = Tektur({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  title: 'Premier IELTS, PTE, OET & TOEFL Training Centre',
+  description: 'Transform your dreams into reality with A.C.E. - The #1 destination for IELTS, PTE, OET & TOEFL preparation with 95%+ success rate. Certified trainers, flexible schedules & proven results.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    url: '/',
+    title: 'A.C.E. - AMOS Centre of Excellence | Premier Language Training',
+    description: 'Transform your dreams into reality with A.C.E. - The #1 destination for IELTS, PTE, OET & TOEFL preparation with 95%+ success rate.',
+    images: [
+      {
+        url: '/images/home-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'A.C.E. Training Centre',
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className="overflow-hidden">
-
+      <OrganizationSchemaMarkup />
       {/* Hero section */}
       <section className="overflow-hidden relative max-md:h-full max-md:py-32 h-[90dvh] flex flex-col gap-4 items-center justify-center w-full bg-gradient-to-t from-green-200 via-white to-white ">
         <AvatarGroup />
@@ -48,9 +70,10 @@ const page = () => {
             className="z-40 block md:hidden text-center text-3xl font-semibold leading-snug">
             Global Opportunities with A.C.E <br />  <span className="text-2xl font-medium bg-gradient-to-b from-black to-gray-500 text-transparent bg-clip-text">Tailored Training Solutions</span>
           </h2>
-          <p data-aos="zoom-in" data-aos-delay="200" className="text-gray-500 text-center max-md:text-sm">
+          <p data-aos="zoom-in" data-aos-delay="200" className="max-md:hidden text-gray-500 text-center max-md:text-sm">
             Personalized training in English proficiency, communication, <br /> and global skills—designed to help you succeed anywhere in the world.
           </p>
+          <p data-aos="zoom-in" data-aos-delay="200" className="md:hidden text-gray-500 text-center max-md:text-sm">Personalized training in English, communication & global<br/> skills  to help you succeed worldwide.</p>
         </div>
 
         <SpecialButton />
@@ -69,15 +92,12 @@ const page = () => {
         </div>
         <div className="max-md:overflow-hidden">
           <img
-          data-aos="fade-left"
             draggable="false"
             src="/bg-arrow.svg"
             alt=""
             className="absolute -top-2 max-md:-top-20 right-0 md:h-full max-md:size-56 w-fit z-0"
           />
           <img
-                    data-aos="fade-left"
-
             draggable="false"
             src="/bg-arrow.svg"
             alt=""
@@ -355,7 +375,7 @@ const page = () => {
         </div>
       </section>
 
-      <section>
+      <section id="testimonials">
         <EdvoyTestimonials />
       </section>
     </main>

@@ -10,12 +10,12 @@ const Banner = () => {
             <span>🎉</span>&nbsp;<span><b>Exclusive Offer!</b></span>&nbsp;<span>First 10 Students gets</span>&nbsp;<span><b>FREE</b></span>&nbsp;<span>ITELS & PTE Consultancy +</span>&nbsp;<span><b>Bonus Perks!</b></span>&nbsp;<span>🚀</span>
           </Marquee>
         </div>
-        <button className='px-6 py-2 bg-white rounded-full text-black text-sm font-semibold'>Claim Now</button>
+        <a href='/register-now' className='px-6 py-2 bg-white rounded-full text-black text-sm font-semibold'>Claim Now</a>
       </div>
       
       <div className='max-md:hidden flex items-center justify-center gap-4'>
         <p>🎉 <b>Exclusive Offer!</b> First 10 Students gets <b>FREE</b> ITELS & PTE Consultancy + <b>Bonus Perks!</b> 🚀</p>
-        <button className='bg-white text-black rounded-full px-5 py-2 cursor-pointer'>Claim Now!</button>
+        <a href='/register-now' className='bg-white text-black rounded-full px-5 py-2 cursor-pointer'>Claim Now!</a>
       </div>
     </article>
   )

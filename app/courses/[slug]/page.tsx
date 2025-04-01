@@ -15,6 +15,7 @@ import Authorize from "@/app/Components/authorize";
 import { mockTestData, MockTest, IconMap } from "@/app/data/types/mockTestData";
 
 
+
 type UserAnswers = Record<string, string | undefined>;
 
 
@@ -162,8 +163,10 @@ const CourseMockTest = () => {
     if (score > passThreshold) return "Good performance. Keep practicing!";
     return "You might want to review the material again.";
   };
+  
 
   return (
+    
     <main className="relative flex items-center justify-center min-h-screen">
 
       {authBox && (
