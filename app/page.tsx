@@ -166,7 +166,7 @@ const page = () => {
 <div className="flex flex-col  justify-between gap-10 ">
 
 <div>
-<h1 data-aos="fade-right" className={`font-bold max-md:text-3xl text-5xl ${figtree.className} `}>Build Skills That Travels  <br className="md:hidden" /> With You</h1>
+<h3 data-aos="fade-right" className={`font-bold max-md:text-3xl text-5xl ${figtree.className} `}>Build Skills That Travels  <br className="md:hidden" /> With You</h3>
 <p data-aos="fade-right" data-aos-delay="160" className="mt-5 text-slate-500">From language mastery to professional growth, our training domains are built to support your journey—wherever you aim to go.</p>
 </div>
   <div data-aos="fade-up" className="grid md:grid-cols-3 mt-6 ">
@@ -257,9 +257,9 @@ const page = () => {
           <div className="md:w-1/2 flex flex-col gap-3">
             <div className="flex flex-col gap-3">
               <p data-aos="zoom-out">Who and What ?</p>
-              <h1 data-aos="zoom-out" className="font-semibold text-5xl max-md:text-3xl border-b-2 pb-3">
+              <h3 data-aos="zoom-out" className="font-semibold text-5xl max-md:text-3xl border-b-2 pb-3">
                 Meet A.C.E
-              </h1>
+              </h3>
             </div>
 
             <div data-aos="fade-up">
@@ -330,9 +330,9 @@ const page = () => {
           <div className="flex flex-col gap-4 md:w-1/2">
             <div className="flex flex-col gap-2">
               <p data-aos="fade-up" className="text-green-800">Our Promise</p>
-              <h1 data-aos="fade-up" data-aos-delay="200" className={`${figtree.className} text-5xl max-md:text-3xl font-semibold`}>
+              <h2 data-aos="fade-up" data-aos-delay="200" className={`${figtree.className} text-5xl max-md:text-3xl font-semibold`}>
                 We don’t just prepare <br /> you for exams
-              </h1>
+              </h2>
             </div>
             <div data-aos="fade-up" data-aos-delay="300">
               <p className="text-slate-500 max-md:text-sm">
@@ -370,7 +370,7 @@ const page = () => {
             />
             <div data-aos="zoom-in"  className=" absolute bottom-10 -left-10 max-md:left-0 ring-1 ring-slate-300 text-black bg-white px-4 py-2 rounded-full  ">
               <img src="/AI.png" alt="sparkle" />
-              <p>Commited to serve Excellence</p>
+              <p>committed to serve Excellence</p>
             </div>
           </div>
         </div>

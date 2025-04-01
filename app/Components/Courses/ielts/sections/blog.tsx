@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const blogs = [
@@ -141,7 +142,7 @@ const BlogLinksSection = ({title}:{title:string}) => {
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogContent.content.map((blog, index) => (
-            <a
+            <Link
               key={index}
               href={blog.url}
               target="_blank"
@@ -151,7 +152,7 @@ const BlogLinksSection = ({title}:{title:string}) => {
               <h3 className="text-lg font-semibold text-green-700 mb-2">{blog.title}</h3>
               <p className="text-sm text-gray-500">{blog.description}</p>
               <span className="block mt-3 text-sm text-green-600 font-medium">Read More →</span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

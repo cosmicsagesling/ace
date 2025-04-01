@@ -7,8 +7,6 @@ export function SpecialButton() {
     <div data-aos="zoom-in" data-aos-delay="350" className="z-40 flex justify-center text-center">
       <HoverBorderGradient
         containerClassName="rounded-full"
-        as="a"
-        href="/register-now"
         className="cursor-pointer bg-black text-white flex items-center space-x-2 px-8"
       >
         <a href="/register-now" className="font-semibold">Get Started</a>

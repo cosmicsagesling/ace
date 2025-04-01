@@ -9,10 +9,9 @@ type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
 
 export function HoverBorderGradient({
   children,
-  href,
   containerClassName,
   className,
-  as: Tag = "a",
+  as: Tag = "button",
   duration = 1,
   clockwise = true,
   ...props
@@ -20,7 +19,6 @@ export function HoverBorderGradient({
   {
     as?: React.ElementType;
     containerClassName?: string;
-    href:string;
     className?: string;
     duration?: number;
     clockwise?: boolean;
