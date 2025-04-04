@@ -59,11 +59,12 @@ export default function ContactSection() {
             
             <div className="space-y-6">
               <div>
-                <p className="text-gray-700 font-medium">info@ACE.io</p>
+                <p className="text-gray-700 font-medium">info@amosglobalsolutions.com</p>
               </div>
               
               <div>
-                <p className="text-gray-700 font-medium">321-221-231</p>
+                <p className="text-gray-700 font-medium">+44 78 5781 8924 / +44 73 9260 0443
+</p>
               </div>
               
               <div>
@@ -88,7 +89,7 @@ export default function ContactSection() {
               <div>
                 <h3 className="font-medium text-lg mb-2">Media Inquiries</h3>
                 <p className="text-gray-600">
-                  For media-related questions or press inquiries, please contact us at media@ACEapp.com.
+                  For media-related questions or press inquiries, please contact us at info@amosglobalsolutions.com .
                 </p>
               </div>
             </div>

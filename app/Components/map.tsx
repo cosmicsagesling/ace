@@ -100,7 +100,9 @@ const LocationSection = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-gray-800">Phone</h3>
-                                    <p className="text-gray-600">+44 20 1234 5678</p>
+                                    <p className="text-gray-600">+44 78 5781 8924 / +44 73 9260 0443
+
+</p>
                                 </div>
                             </div>
 
@@ -110,7 +112,7 @@ const LocationSection = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-gray-800">Email</h3>
-                                    <p className="text-gray-600">contact@aceinc.com</p>
+                                    <p className="text-gray-600">info@amosglobalsolutions.com</p>
                                 </div>
                             </div>
                         </div>
