@@ -154,12 +154,12 @@ const TestimonialCard = ({
 const ACETestimonials = () => {
   const testimonials = [
     {
-      name: "Sami Ullah",
-      country: "Pakistan",
+      name: "Kishor R",
+      country: "India",
       destination: "UK",
       university: "University of East London",
       universityLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRivbiXlbNafSIHv9GCYuEqLhTQ2EQPe7C0-u4cjrWTW9O2rGt1XWhV-u9VF1DIymsL66s&usqp=CAU",
-      review: "I had an amazing experience with ACE Study Abroad Consultants - Faisalabad! My counselor Sir Ahsan, provided invaluable and timely assistance for my Master's admission. Their team's expertise and dedication made the process smooth and stress-free. Highly recommended for anyone seeking top-notch academic support!",
+      review: "It's a wonderful study abroad consultancy and there are a variety of course options available to students. I also find the people and the support they provide exceptional. They truly care about their students and want to see them succeed.",
       hasVideo: false,
       imageUrl: null,
       videoUrl: null,
@@ -197,9 +197,9 @@ const ACETestimonials = () => {
       universityLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRY5CNLrRGPxKFpX3KLbxMrGMwUvSgumB3jQ&s",
       review: "Excellent support from ACE throughout my application process. The team was responsive and knowledgeable.",
       hasVideo: false,
-      videoUrl: "/T2.mov",
-      thumbnailUrl: "/t2thumb.jpg",
-      imageUrl: "/api/placeholder/400/225"
+      videoUrl: null,
+      thumbnailUrl: null,
+      imageUrl: null
     }
   ];
 

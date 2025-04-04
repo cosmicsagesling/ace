@@ -47,7 +47,7 @@ const ImprovedCTA = () => {
   };
 
   return (
-    <div className="m-5  text-black bg-[url('/cta_img.jpeg')] bg-no-repeat ring-1  ring-slate-300  rounded-xl bg-right from-green-500 to-green-200 md:p-15 px-5 py-10 rounded-">
+    <div className="m-5  text-black bg-[url('/more-leaves.png')] bg-no-repeat ring-1  ring-slate-300  rounded-xl bg-right from-green-500 to-green-200 md:p-15 px-5 py-10 rounded-">
       <div className="md:mx-auto">
         <h2 className="max-md:text-3xl text-4xl font-bold mb-4 max-md:text-white">
           Take the First Step Towards Your Success!
@@ -120,8 +120,8 @@ const ImprovedCTA = () => {
             Don&apos;t wait—your future starts now!
           </p>
           <div className="flex items-center gap-2">
-            <span className="text-sm">⭐⭐⭐⭐⭐</span>
-            <span className="text-purple-100">Exceptional Ratings</span>
+            <span className="text-sm ">⭐⭐⭐⭐⭐</span>
+            <span className="text-black">Exceptional Ratings</span>
           </div>
         </div>
       </div>

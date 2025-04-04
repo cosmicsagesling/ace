@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Achieve your target IELTS band score with A.C.E.\'s expert coaching. Comprehensive training for all modules.',
     images: [
       {
-        url: '/images/ielts-training.jpg',
+        url: 'https://ace-omega-murex.vercel.app/seo/ielts.png',
         width: 1200,
         height: 630,
         alt: 'IELTS Training at A.C.E.',

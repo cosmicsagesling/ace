@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Heart, Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Facebook, Youtube, ArrowRight } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Instagram, Linkedin, Facebook, Youtube, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -116,7 +116,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-200 hover:text-gray-500 text-sm">Terms of Service</a>
-              <a href="#" className="text-gray-200 hover:text-gray-500 text-sm">Privacy Policy</a>
+              <a href="/privacy-policy" className="text-gray-200 hover:text-gray-500 text-sm">Privacy Policy</a>
             </div>
           </div>
           <div className="mt-6 text-center text-xs text-gray-600">

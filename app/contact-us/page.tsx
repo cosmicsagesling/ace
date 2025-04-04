@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     url: '/contact-us',
     title: 'Contact A.C.E. Training Centre | Get Expert Help',
     description: 'Connect with A.C.E. for all your language training needs. Book a consultation or speak with our expert trainers.',
+    images: [
+      {
+        url: 'https://ace-omega-murex.vercel.app/seo/contact.png',
+        width: 1200,
+        height: 630,
+        alt: 'Professional Skills Training at A.C.E.',
+      },
+    ],
   },
 };
 

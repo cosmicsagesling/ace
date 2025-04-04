@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Upgrade your professional skills with A.C.E.\'s advanced training programs. Master communication, leadership, and creative thinking.',
     images: [
       {
-        url: '/images/skill-development.jpg',
+        url: 'https://ace-omega-murex.vercel.app/seo/skill.png',
         width: 1200,
         height: 630,
         alt: 'Professional Skills Training at A.C.E.',

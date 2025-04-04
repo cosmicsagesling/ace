@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Prepare for TOEFL iBT with A.C.E.\'s comprehensive training. Perfect for university admissions with focused academic English.',
     images: [
       {
-        url: '/images/toefl-training.jpg',
+        url: 'https://ace-omega-murex.vercel.app/seo/courses.png',
         width: 1200,
         height: 630,
         alt: 'TOEFL Training at A.C.E.',

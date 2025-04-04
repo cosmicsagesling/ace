@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Master the PTE Academic exam with A.C.E.\'s specialized coaching. AI-powered practice tests and expert strategies.',
     images: [
       {
-        url: '/images/pte-training.jpg',
+        url: 'https://ace-omega-murex.vercel.app/seo/pte.png',
         width: 1200,
         height: 630,
         alt: 'PTE Training at A.C.E.',

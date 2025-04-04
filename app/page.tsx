@@ -13,7 +13,6 @@ import { TimelineDemo } from "./Components/Timeline";
 import EdvoyTestimonials from "./Components/testimonials";
 import { Limelight, Tektur } from "next/font/google";
 import { Metadata } from "next";
-import BacklinksSection from "./Components/backlinksection";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -41,7 +40,7 @@ export const metadata: Metadata = {
     description: 'Transform your dreams into reality with A.C.E. - The #1 destination for IELTS, PTE, OET & TOEFL preparation with 95%+ success rate.',
     images: [
       {
-        url: '/images/home-banner.jpg',
+        url: 'https://ace-omega-murex.vercel.app/singleAce.jpg',
         width: 1200,
         height: 630,
         alt: 'A.C.E. Training Centre',
