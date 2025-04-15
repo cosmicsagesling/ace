@@ -56,12 +56,12 @@ const ImprovedCTA = () => {
   };
 
   return (
-    <div className="m-5  text-black bg-[url('/more-leaves.png')] bg-no-repeat ring-1  ring-slate-300  rounded-xl bg-right from-green-500 to-green-200 md:p-15 px-5 py-10 rounded-">
+    <div className="m-5  text-black bg-[url('/more-leaves.png')] bg-no-repeat  ring-1  ring-slate-300  rounded-xl bg-right max-md:bg-[0px_300px] from-green-500 to-green-200 md:p-15 px-5 py-10 rounded-">
       <div className="md:mx-auto">
-        <h2 className="max-md:text-3xl text-4xl font-bold mb-4 max-md:text-white">
+        <h2 className="max-md:text-3xl text-4xl font-bold mb-4 ">
           Take the First Step Towards Your Success!
         </h2>
-        <p className="max-md:text-sm md:text-slate-400 max-md:text-slate-200  mb-6">
+        <p className="max-md:text-sm md:text-slate-400 max-md:text-slate-900  mb-6">
           Start your journey with The A.C.E. today! Get expert training, flexible learning, and proven <span className="bg-green-800 text-white px-2 ml-2 "> <i>success strategies</i></span> 
         </p>
 
@@ -125,7 +125,7 @@ const ImprovedCTA = () => {
         )}
 
         <div className="mt-8 flex flex-col md:flex-row md:items-center justify-center md:justify-between">
-          <p className="text-green-600 max-md:text-green-400 mb-4 md:mb-0">
+          <p className="text-green-00 max-md:text-green-800 mb-4 md:mb-0">
             Don&apos;t wait—your future starts now!
           </p>
           <div className="flex items-center gap-2">
