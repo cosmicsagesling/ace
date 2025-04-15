@@ -10,9 +10,9 @@ import { SpecialButton } from "./Components/SpecialButton";
 import { BookOpenCheck, Check, Handshake } from "lucide-react";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import { TimelineDemo } from "./Components/Timeline";
-import EdvoyTestimonials from "./Components/testimonials";
 import { Limelight, Tektur } from "next/font/google";
 import { Metadata } from "next";
+import ClaimSection from "./Components/ClaimSection";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -322,61 +322,8 @@ const page = () => {
 
       <TimelineDemo />
 
-
-
-      <section className="mt-10 p-5 lg:p-10">
-        <div className="flex h-full max-md:flex-col max-md:items-start items-center max-md:gap-4 justify-between">
-          <div className="flex flex-col gap-4 md:w-1/2">
-            <div className="flex flex-col gap-2">
-              <p data-aos="fade-up" className="text-green-800">Our Promise</p>
-              <h2 data-aos="fade-up" data-aos-delay="200" className={`${figtree.className} text-5xl max-md:text-3xl font-semibold`}>
-                We don’t just prepare <br /> you for exams
-              </h2>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300">
-              <p className="text-slate-500 max-md:text-sm">
-                We go beyond just helping you pass exams—we equip you with the
-                knowledge, skills, and confidence needed to excel in your career
-                and life.
-              </p>
-              <p className="text-slate-500 max-md:text-sm mt-2">
-                Our approach focuses on practical learning, critical thinking,
-                and real-world applications, ensuring that you are prepared not
-                just for tests, but for a successful and fulfilling future.
-              </p>
-            </div>
-            <form data-aos="fade-up" data-aos-delay="400"
-              action=""
-              className="flex items-center ring-1 ring-slate-200 w-fit rounded-xl overflow-hidden"
-            >
-              <input
-                type="text"
-                placeholder="(+91) Enter your Mobile Number "
-                className="md:px-5 max-md:pl-3 w-full outline-none max-md:text-sm"
-                required
-              />
-              <button className="bg-green-900 text-white px-4 py-2 max-md:text-sm">
-                Claim Free Consultancy
-              </button>
-            </form>
-          </div>
-
-          <div className="relative md:w-md w-full h-fit rounded-bl-full ">
-            <img
-              src="https://images.unsplash.com/photo-1576872381149-7847515ce5d8?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="excellence"
-              className="object-cover md:w-full h-full rounded-bl-full"
-            />
-            <div data-aos="zoom-in"  className=" absolute bottom-10 -left-10 max-md:left-0 ring-1 ring-slate-300 text-black bg-white px-4 py-2 rounded-full  ">
-              <img src="/AI.png" alt="sparkle" />
-              <p>committed to serve Excellence</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <ClaimSection/>
       <section id="testimonials">
-        <EdvoyTestimonials />
       </section>
     </main>
   );

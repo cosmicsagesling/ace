@@ -31,8 +31,6 @@ const TawkTo: React.FC<TawkToProps> = ({ propertyId, widgetId }) => {
         // Example of setting visitor attributes
         (window as any).Tawk_API.onLoad = () => {
           (window as any).Tawk_API.setAttributes({
-            name: 'Website Visitor',
-            email: 'visitor@example.com'
           }, (error: any) => {
             if (error) {
               console.error('Error setting attributes:', error);

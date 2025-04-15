@@ -11,7 +11,7 @@ const ImprovedCTA = () => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async(e: FormEvent) => {
     e.preventDefault();
 
     // Trim the input
@@ -33,16 +33,25 @@ const ImprovedCTA = () => {
       setLoading(true);
       setError("");
       
-      // Simulate API call with timeout
-      setTimeout(() => {
-        console.log("Contact info submitted:", trimmedContactInfo);
+      const response  = await fetch("/api/submitForm",{
+        method:"POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body : JSON.stringify({mobcta: trimmedContactInfo})
+      })
+      
+      if(response.ok){
+        console.log("Form submitted successfully");
         setSubmitted(true);
-        setLoading(false);
-      }, 2000); // 2 seconds delay to show the loading state
+      }// 2 seconds delay to show the loading state
     } catch (error) {
       console.log(error);
       setError("Something went wrong. Please try again.");
       setLoading(false);
+    }
+    finally{
+      setLoading(false)
     }
   };
 
@@ -77,7 +86,7 @@ const ImprovedCTA = () => {
               <button
                 type="submit"
                 className={`${
-                  isLoading ? "bg-green-600" : "bg-green-700 hover:bg-green-600"
+                  isLoading ? "bg-green-900" : "bg-green-900 hover:bg-green-600"
                 } md:border-l-2 max-md:mt-6 text-white font-semibold px-6 py-3 rounded-r-lg md:rounded-l-none rounded-l-lg transition cursor-pointer duration-300`}
                 disabled={isLoading}
               >

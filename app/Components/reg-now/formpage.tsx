@@ -131,9 +131,13 @@ const MultiStepForm: React.FC = () => {
   const handleSubmit = async () => {
     try {
       setLoading(true);
-      await new Promise<void>((resolve) => {
-        setTimeout(resolve, 5000);
-      });
+      const response  = await fetch("/api/submitForm",{
+        method:"POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body : JSON.stringify(formData)
+      })
       setSubmitClicked(true);
     } catch (error) {
       console.error(error);

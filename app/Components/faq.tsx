@@ -30,6 +30,42 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen } : {question:string, an
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0); // Set the second item open by default
+  const [email, setemail] = useState("")
+
+  const [loading, setLoading] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = async(e : React.FormEvent) => {
+
+    e.preventDefault();
+
+    try {
+      setLoading(true)
+      const result = await fetch("/api/submitForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({email:email})
+      })
+
+      if(result.ok){
+        console.log("Form submitted successfully")
+        setSubmitted(true)
+      
+      }
+    } catch (error) {
+      console.log(error);
+      
+    }
+
+    finally{
+        setLoading(false)
+    }
+
+
+
+  }
 
   const faqItems = [
     {
@@ -69,13 +105,13 @@ const FAQ = () => {
             <p className="text-gray-400 mb-8 ">
               Find answers to the most common questions about our services and approach.
             </p>
-            <form action="" className='flex justify-betweem md:mr-10 ring-1  ring-slate-400 rounded-xl overflow-hidden pl-5 justify-between '>
+            <form action="" onSubmit={handleSubmit} className='flex justify-betweem md:mr-10 ring-1  ring-slate-400 rounded-xl overflow-hidden pl-5 justify-between '>
               <div className='flex items-center gap-4'>
                 <Mail/>
-              <input type="text" placeholder='Enter your email' className='w-full outline-0' />
+              <input type="text" name='email' value={email} onChange={(e)=>setemail(e.target.value)} placeholder='Enter your email' className='w-full outline-0' />
 
               </div>
-              <button className='bg-green-700 text-white py-3 px-4 '>Send Query</button>
+              <button className='cursor-pointer bg-green-900 text-white py-3 px-4 '>{submitted ? 'Sent :)'  :  (loading ? 'Sending..' : 'Send Request')}</button>
             </form>
           </div>
           
