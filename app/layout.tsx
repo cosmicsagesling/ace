@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: 'A.C.E. - AMOS Centre of Excellence',
     images: [
       {
-        url: 'http://theacemastery.vercel.app/ace%20logo.svg',
+        url: 'https://ace-omega-murex.vercel.app/singleAce.jpg',
         width: 1200,
         height: 630,
         alt: 'A.C.E. Training Centre',
