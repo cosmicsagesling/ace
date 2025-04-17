@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { Send, X, Bot } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@heroui/input";
 import ReactMarkdown from "react-markdown";
 import NalaLogo from "./Nala";
 
