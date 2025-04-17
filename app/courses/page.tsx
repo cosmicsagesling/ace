@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     canonical: '/courses/toefl-preparation',
   },
   openGraph: {
-    url: '/courses/toefl-preparation',
+    url: 'https://theacetraining.com/courses/toefl-preparation',
     title: 'TOEFL iBT Preparation | University Admission Test Training | A.C.E.',
     description: 'Prepare for TOEFL iBT with A.C.E.\'s comprehensive training. Perfect for university admissions with focused academic English.',
     images: [
       {
-        url: 'https://ace-omega-murex.vercel.app/seo/courses.png',
+        url: 'https://theacetraining.com/seo/courses.png',
         width: 1200,
         height: 630,
         alt: 'TOEFL Training at A.C.E.',

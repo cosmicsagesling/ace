@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     canonical: '/courses/oet-preparation',
   },
   openGraph: {
-    url: '/courses/oet-preparation',
+    url: 'https://theacetraining.com/courses/oet-preparation',
     title: 'OET Preparation for Healthcare Professionals | A.C.E.',
     description: 'Specialized OET training for nurses, doctors and healthcare professionals. Master medical English with expert coaches.',
     images: [
       {
-        url: 'https://ace-omega-murex.vercel.app/seo/oet.png',
+        url: 'https://theacetraining.com/seo/oet.png',
         width: 1200,
         height: 630,
         alt: 'OET Training at A.C.E.',

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description: 'Transform your dreams into reality with A.C.E. - The #1 destination for IELTS, PTE, OET & TOEFL preparation with 95%+ success rate.',
     images: [
       {
-        url: 'https://ace-omega-murex.vercel.app/singleAce.jpg',
+        url: 'https://theacetraining.com/singleAce.jpg',
         width: 1200,
         height: 630,
         alt: 'A.C.E. Training Centre',

@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     canonical: '/skill-development',
   },
   openGraph: {
-    url: '/skill-development',
+    url: 'https://theacetraining.com/skill-development',
     title: 'Advanced Skills Training | Professional Development | A.C.E.',
     description: 'Upgrade your professional skills with A.C.E.\'s advanced training programs. Master communication, leadership, and creative thinking.',
     images: [
       {
-        url: 'https://ace-omega-murex.vercel.app/seo/skill.png',
+        url: 'https://theacetraining.com/seo/skill.png',
         width: 1200,
         height: 630,
         alt: 'Professional Skills Training at A.C.E.',

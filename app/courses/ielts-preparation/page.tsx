@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     canonical: '/courses/ielts-preparation',
   },
   openGraph: {
-    url: '/courses/ielts-preparation',
+    url: 'https://theacetraining.com/courses/ielts-preparation',
     title: 'IELTS Preparation & Coaching | A.C.E.',
     description: 'Achieve your target IELTS band score with A.C.E.\'s expert coaching. Comprehensive training for all modules.',
     images: [
       {
-        url: 'https://ace-omega-murex.vercel.app/seo/ielts.png',
+        url: 'https://theacetraining.com/seo/ielts.png',
         width: 1200,
         height: 630,
         alt: 'IELTS Training at A.C.E.',

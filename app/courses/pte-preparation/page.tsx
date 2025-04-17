@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     canonical: '/courses/pte-preparation',
   },
   openGraph: {
-    url: '/courses/pte-preparation',
+    url: 'https://theacetraining.com/courses/pte-preparation',
     title: 'PTE Academic Preparation | A.C.E.',
     description: 'Master the PTE Academic exam with A.C.E.\'s specialized coaching. AI-powered practice tests and expert strategies.',
     images: [
       {
-        url: 'https://ace-omega-murex.vercel.app/seo/pte.png',
+        url: 'https://theacetraining.comseo/pte.png',
         width: 1200,
         height: 630,
         alt: 'PTE Training at A.C.E.',

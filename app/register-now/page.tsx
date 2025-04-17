@@ -9,12 +9,12 @@ export const metadata: Metadata = {
     canonical: '/register-now',
   },
   openGraph: {
-    url: '/register-now',
+    url: 'https://theacetraining.com/register-now',
     title: 'Register for Expert Training | A.C.E.',
     description: 'Take the first step towards your language certification success. Register for A.C.E.\'s expert training programs.',
     images: [
       {
-        url: 'https://ace-omega-murex.vercel.app/seo/reg-now.png',
+        url: 'https://theacetraining.com/seo/reg-now.png',
         width: 1200,
         height: 630,
         alt: 'A.C.E. Training Centre',
