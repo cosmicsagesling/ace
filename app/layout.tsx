@@ -7,8 +7,8 @@ import Banner from "./Components/Banner";
 import AOSInit from "./Components/AOS";
 import ImprovedCTA from "./Components/CTA";
 import AccordionDemo from "./Components/faq";
-import TawkTo from "./Components/LiveChat";
-import { TAWK_CONFIG } from "./config/livechat.config";
+
+import Nala from "./Components/LiveChat";
 
 
 const geistSans = Geist({
@@ -81,10 +81,7 @@ export default function RootLayout({
         <Banner />
         <Navbar />
         {children}
-        <TawkTo 
-          propertyId={TAWK_CONFIG.propertyId}
-          widgetId={TAWK_CONFIG.widgetId}
-        />
+        <Nala />
       <AccordionDemo/>
 
 <ImprovedCTA/>
